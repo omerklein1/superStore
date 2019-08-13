@@ -2606,22 +2606,22 @@
 		},
 		"Groups": {
 			"Category": {
-				"Accessories" : 34,
-				"Desktop Computers" : 7,
-				"Flat Screens" : 2,
-				"Keyboards" : 4,
-				"Laptops" : 11,
-				"Printers" : 9,
-				"Smartphones and Tablets" : 9,
-				"Mice" : 7,
-				"Computer System Accessories" : 8,
-				"Graphics Card" : 4,
-				"Scanners" : 4,
-				"Speakers" : 3,
-				"Software" : 8,
-				"Telekommunikation" : 3,
-				"Servers" : 3,
-				"Flat Screen TVs" : 3
+				"Accessories": 34,
+				"Desktop Computers": 7,
+				"Flat Screens": 2,
+				"Keyboards": 4,
+				"Laptops": 11,
+				"Printers": 9,
+				"Smartphones and Tablets": 9,
+				"Mice": 7,
+				"Computer System Accessories": 8,
+				"Graphics Card": 4,
+				"Scanners": 4,
+				"Speakers": 3,
+				"Software": 8,
+				"Telekommunikation": 3,
+				"Servers": 3,
+				"Flat Screen TVs": 3
 			},
 			"SupplierName": {
 				"Titanium": 21,
@@ -2703,8 +2703,8 @@
 						"data": 3
 					},
 					{
-					  "text": "Flat Screen TVs",
-					  "data": 3
+						"text": "Flat Screen TVs",
+						"data": 3
 					}
 				]
 			},
@@ -2712,53 +2712,53 @@
 				"type": "SupplierName",
 				"values": [
 					{
-					"text": "Titanium",
-					"data": 21
-				  },
-				  {
-					"text": "Technocom",
-					"data": 22
-				  },
-				  {
-					"text": "Red Point Stores",
-					"data": 7
-				  },
-				  {
-					"text": "Very Best Screens",
-					"data": 14
-				  },
-				  {
-					"text": "Smartcards",
-					"data": 2
-				  },
-				  {
-					"text": "Alpha Printers",
-					"data": 5
-				  },
-				  {
-					"text": "Printer for All",
-					"data": 8
-				  },
-				  {
-					"text": "Oxynum",
-					"data": 8
-				  },
-				  {
-					"text": "Fasttech",
-					"data": 15
-				  },
-				  {
-					"text": "Ultrasonic United",
-					"data": 15
-				  },
-				  {
-					"text": "Speaker Experts",
-					"data": 3
-				  },
-				  {
-					"text": "Brainsoft",
-					"data": 3
-				  }
+						"text": "Titanium",
+						"data": 21
+					},
+					{
+						"text": "Technocom",
+						"data": 22
+					},
+					{
+						"text": "Red Point Stores",
+						"data": 7
+					},
+					{
+						"text": "Very Best Screens",
+						"data": 14
+					},
+					{
+						"text": "Smartcards",
+						"data": 2
+					},
+					{
+						"text": "Alpha Printers",
+						"data": 5
+					},
+					{
+						"text": "Printer for All",
+						"data": 8
+					},
+					{
+						"text": "Oxynum",
+						"data": 8
+					},
+					{
+						"text": "Fasttech",
+						"data": 15
+					},
+					{
+						"text": "Ultrasonic United",
+						"data": 15
+					},
+					{
+						"text": "Speaker Experts",
+						"data": 3
+					},
+					{
+						"text": "Brainsoft",
+						"data": 3
+					}
 				]
 			}
 		]

@@ -1,0 +1,41 @@
+.item {
+height: 200px;
+width: 130px;
+list-style-type: none;
+border: groove 1px;
+}
+
+.item-img {
+    height: 130px;
+    width: 130px;
+}
+.item-btn {
+    width: 100%;
+}
+
+.item h5,p,button {
+    margin: 0;
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap;
+    }
+    
+  /* Tooltip text */
+ .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

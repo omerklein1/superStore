@@ -1,0 +1,32 @@
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+}
+
+.img-user, .cart-img{
+height: 50px;
+width: 50px;
+border-radius: 50%;
+
+}
+
+select {
+    border: 0;
+    width: 14px;
+}
+
+.img-user , p {
+display: inline;
+}
+
+.cart-p1{
+    position: absolute;
+    top: 25px;
+}
+.cart-p2 {
+    position: relative;
+    bottom: 10px;
+}

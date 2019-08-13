@@ -1,0 +1,10 @@
+.countainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: space-evenly;
+    align-items:  center ;
+    align-content: space-around ;
+    padding: 0;
+}

@@ -1,4 +1,5 @@
 // import axios from 'axios'
+    import data from './dataPRO.json'
 
 // export const initList = () => dispatch => {
 //     axios.get('https://restcountries.eu/rest/v2/all')
@@ -11,3 +12,12 @@
 // export const change = (text) => dispatch => {
 //     dispatch({payload: text, type: 'TEXT_READED'})
 // }
+
+export const gatDataList = () => dispatch => {
+    dispatch({
+        type: 'DATA_READER',
+        payload: data
+      });
+  
+    }
+
