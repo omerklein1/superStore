@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from "./navbar"
-// import Categories from './categories'
+import Categories from './categories'
 import ProductsList from './productsList'
 import { connect } from 'react-redux'
 import { gatDataList } from '../actions'
@@ -21,7 +21,7 @@ class Components extends Component {
 console.log(this.props.dataList)
         return dataList ? <main className='components'>
             <Navbar />
-            {/* <Categories /> */}
+            <Categories />
             <ProductsList className="countainer"/>
         </main> : 'טוען'
     }

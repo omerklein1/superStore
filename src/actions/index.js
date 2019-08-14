@@ -21,3 +21,10 @@ export const gatDataList = () => dispatch => {
   
     }
 
+    export const categoryFilter = (category) => dispatch => {
+dispatch({
+  type: 'SENDING_DATA',
+        payload: category
+})
+    }
+

@@ -4,6 +4,8 @@
     display: flex;
     justify-content: space-between;
     direction: rtl;
+    padding: 5px;
+    background-color: white;
 }
 
 .img-user, .cart-img{

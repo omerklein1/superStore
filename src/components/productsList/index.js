@@ -3,23 +3,24 @@ import { connect } from 'react-redux'
 import Product from './product'
 import './productsList.css'
 
-class productsList extends Component {
+class ProductsList extends Component {
 
     render() {
-        let { dataList } = this.props,
+        let { dataList, category='' } = this.props,
             { ProductCollection } = dataList
 
-        return <ul className="countainer">{
-            ProductCollection
+        return <div><div className="title"><h2>מוצרים</h2><input type="search" placeholder="חפש"></input></div><ul className="countainer">
+        {ProductCollection.filter(pro => pro.Category.includes(category))
                 .map(pro => <Product
                     key={pro.name}
                     {...pro}
                 />)
-        }</ul>
+        }</ul></div>
     }
 
 }
 
 export default connect(state => ({
-    dataList: state.dataList
-}), {})(productsList)
+    dataList: state.dataList,
+    category: state.categoryFilter
+}), {})(ProductsList)

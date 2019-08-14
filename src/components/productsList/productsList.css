@@ -8,3 +8,11 @@
     align-content: space-around ;
     padding: 0;
 }
+.title h2 {
+    display: inline;
+    padding-left: 45%;
+}
+.title input {
+    border-radius: 5px;
+    border-color: transparent;
+}

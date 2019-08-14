@@ -3,6 +3,8 @@ height: 200px;
 width: 130px;
 list-style-type: none;
 border: groove 1px;
+background-color: white;
+margin: 4px;
 }
 
 .item-img {
@@ -11,6 +13,9 @@ border: groove 1px;
 }
 .item-btn {
     width: 100%;
+    background-color: #00000052;
+    margin-top: 7px;
+    border: double;
 }
 
 .item h5,p,button {
