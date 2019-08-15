@@ -9,9 +9,9 @@
 //         .catch(error => dispatch({ payload: error.message, type: 'COUNTRIES_LIST_ERROR' })
 //         );
 // }
-// export const change = (text) => dispatch => {
-//     dispatch({payload: text, type: 'TEXT_READED'})
-// }
+export const change = (text) => dispatch => {
+    dispatch({payload: text, type: 'TEXT_READED'})
+}
 
 export const gatDataList = () => dispatch => {
     dispatch({

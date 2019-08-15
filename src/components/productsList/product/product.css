@@ -14,7 +14,7 @@ margin: 4px;
 .item-btn {
     width: 100%;
     background-color: #00000052;
-    margin-top: 7px;
+    margin-top: 9px;
     border: double;
 }
 
@@ -23,6 +23,7 @@ margin: 4px;
     text-overflow: ellipsis; 
     overflow: hidden; 
     white-space: nowrap;
+    direction: ltr;
     }
     
   /* Tooltip text */
