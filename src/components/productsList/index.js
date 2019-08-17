@@ -15,7 +15,7 @@ class ProductsList extends Component {
         if (text) {
             filter = ProductCollection.filter(pro => pro.Name.toLowerCase().startsWith(text))
         }else{
-            filter = ProductCollection.filter(pro => pro.Category.includes(category))
+            filter = ProductCollection.filter(pro => pro.MainCategory.includes(category))
         }
       
             return <div className="productsList"><Search lengthList={filter.length}/>

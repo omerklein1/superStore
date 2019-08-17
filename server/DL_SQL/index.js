@@ -59,9 +59,9 @@
 // jsonfile.writeFileSync('categories.json', category);
 // jsonfile.writeFileSync('dataAfterChange.json', ProductCollection);
 
-const data = require('./dataAfterChange'),
-categories = require('./categories'),
-subCategories = require('./subCategories');
+// const data = require('./dataAfterChange'),
+// categories = require('./categories'),
+// subCategories = require('./subCategories');
 
 const mysql = require('mysql'),
    database = "LW2xRNJF3p",
@@ -91,24 +91,55 @@ async function create(table, item) {
 }
 
 
-   con.connect(async err => {
-       if(err) throw err
 
-        await query(`CREATE TABLE IF NOT EXISTS subCategories (
-           id VARCHAR(255),
-           name VARCHAR(255),
-           categoryId VARCHAR(255)
-           ) `)
+async function read(table, idForFilter) {
+    if(idForFilter){
+        return query(`SELECT * FROM ${table} WHERE id='${idForFilter}'`)
+    }
+    return query(`SELECT * FROM ${table}`)
+}    
 
-           await Promise.all(subCategories.map(pro => {
-            create('subCategories', {
-                id: pro.id,
-           name: pro.subCategory,
-           categoryId: pro.categoryId
-            }
-            )
-           }));
-        console.log('o.k!')
-    })
+
+
+async function update(table, item, id) {
+    let textForUpdate;
+    for (let [key, value] of Object.entries(item)) {
+        if(Object.keys(item).length == Object.keys(item).findIndex(key) +1){
+            return textForUpdate += `${key} = '${value}'`
+        }
+        return textForUpdate += `${key} = '${value}', `
+    }
+    return query(`UPDATE ${table}
+    SET ${textForUpdate}
+    WHERE id = ${id};`)
+}
+
+async function del(table, id) {
+    return query(`DELETE FROM ${table} WHERE id = '${id}';`)
+}
+
+
+read('products', 'HT-1000').then(res => console.log(res))
+
+
+// con.connect(async err => {
+//     if(err) throw err
+
+//      await query(`CREATE TABLE IF NOT EXISTS subCategories (
+//         id VARCHAR(255),
+//         name VARCHAR(255),
+//         categoryId VARCHAR(255)
+//         ) `)
+
+//         await Promise.all(subCategories.map(pro => {
+//          create('subCategories', {
+//              id: pro.id,
+//         name: pro.subCategory,
+//         categoryId: pro.categoryId
+//          }
+//          )
+//         }));
+//      console.log('o.k!')
+//  })
 
 

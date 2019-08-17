@@ -10,19 +10,33 @@ class Categories extends Component {
         this.props.categoryFilter(e.target.id)
     }
 
+    removeDuplicates = (originalArray, prop) => {
+    var newArray = [];
+    var lookupObject = {};
+    
+    for (var i in originalArray) {
+        lookupObject[originalArray[i][prop]] = originalArray[i];
+    }
+
+    for (i in lookupObject) {
+        newArray.push(lookupObject[i]);
+    }
+    
+    return newArray;
+}
+
     render() {
         let { dataList } = this.props,
             { ProductCollection, ProductCollectionStats } = dataList
         const temp = [],
         categories = ProductCollectionStats.Filters[0]
-        ProductCollection.filter(pro => temp.push(pro.Category))
-console.log(temp);
-const categoriesFilter = new Set(temp)
-console.log(categoriesFilter);
+        ProductCollection.filter(pro => temp.push({cat: pro.MainCategory}))
+const categoriesFilter = this.removeDuplicates(temp, "cat")
+
         return <div className="categories"><h2>קטגוריות</h2>
         <ul className="categories-list">{
-            categories.values
-                .map(pro => <li onClick={this.filterCategory} id={pro.text}>{pro.text}</li>)
+            categoriesFilter
+                .map(pro => <li onClick={this.filterCategory} id={pro.cat}>{pro.cat}</li>)
         }</ul></div>
     }
 
