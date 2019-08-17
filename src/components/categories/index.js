@@ -27,9 +27,8 @@ class Categories extends Component {
 
     render() {
         let { dataList } = this.props,
-            { ProductCollection, ProductCollectionStats } = dataList
-        const temp = [],
-        categories = ProductCollectionStats.Filters[0]
+            { ProductCollection } = dataList
+        const temp = []
         ProductCollection.filter(pro => temp.push({cat: pro.MainCategory}))
 const categoriesFilter = this.removeDuplicates(temp, "cat")
 

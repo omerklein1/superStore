@@ -2,7 +2,7 @@
 height: 200px;
 width: 130px;
 list-style-type: none;
-border: groove 1px;
+border: 1px solid #eee;
 background-color: white;
 margin: 4px;
 }
@@ -14,8 +14,18 @@ margin: 4px;
 .item-btn {
     width: 100%;
     background-color: #00000052;
-    margin-top: 9px;
-    border: double;
+    margin-top: 11px;
+    border: none;
+    background-color: #b1d426;
+    color: #333;
+    border-radius: 20px;
+}
+.item p {
+  color: #e83299;
+  font-weight: bold;
+}
+.item h5 {
+  font-weight: normal;
 }
 
 .item h5,p,button {

@@ -4,6 +4,7 @@ import './navbar.css'
 class Navbar extends Component {
 
     render() {
+        let numOfProInCart, cost
         return <ul className='navbar'>
             <li className="user">
                 <img className="img-user" src="img/omer_klein.png" alt="user pic" />
@@ -17,8 +18,8 @@ class Navbar extends Component {
             </li>
 
             <li>
-<p className="cart-p1">5 מוצרים</p>
-<p className="cart-p2">325 ש"ח</p>
+<p className="cart-p1">{numOfProInCart || 0} מוצרים</p>
+<p className="cart-p2">{cost || 0} ₪</p>
 <img className="cart-img" src="img/cart.png" alt="cart" />
             </li>
         </ul>

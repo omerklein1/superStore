@@ -143,3 +143,4 @@ read('products', 'HT-1000').then(res => console.log(res))
 //  })
 
 
+module.exports = { create, read, update, del }

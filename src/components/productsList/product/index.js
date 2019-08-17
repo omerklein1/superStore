@@ -9,7 +9,7 @@ class Product extends Component {
 <img className="item-img" src={ProductPicUrl} alt="item pic"/>
 <h5 className="tooltip">{Name}</h5>
 <span class="tooltiptext">{Name}</span>
-<p>{Price}$</p>
+<p>₪{Price}</p>
 <button className="item-btn">הוסף לסל</button>
         </li>
     }
