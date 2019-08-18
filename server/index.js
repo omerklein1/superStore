@@ -1,56 +1,18 @@
-const BL = require('./BL')
+const
+   express = require('express'),
+   app = express(),
+   bodyParser = require('body-parser'),
+   router = require('./Router'),
+   cors = require('cors')
 
-async function rest(collection, action, data, res) {
 
-    let result
+app.use(cors())
 
-    try {
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
-        result = await BL[collection][action](data)
+app.use(express.static('../public'))
 
-    } catch (error) {
+router(app)
 
-        res.send({ error: error.message || error })
-
-    }
-
-    res.send(result)
-
-}
-
-const Router = app => {
-
-    app.get('/tasks/:id?', async (req, res) => {
-
-        const { id } = req.params
-
-        rest('tasks', id ? 'readOne' : 'read', id, res)
-
-    })
-
-    app.post('/tasks', async (req, res) => {
-
-        const { body } = req
-
-        rest('tasks', 'create', body, res)
-    })
-
-    app.put('/tasks', async (req, res) => {
-
-        const { body } = req
-
-        rest('tasks', 'update', body, res)
-
-    })
-
-    app.delete('/tasks/:id', async (req, res) => {
-
-        const { id } = req.params
-
-        rest('tasks', 'del', id, res)
-
-    })
-
-}
-
-module.exports = Router
+app.listen(1200, () => console.log(`Server is running: at port: 1200`))

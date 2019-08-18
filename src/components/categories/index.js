@@ -1,46 +1,52 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { categoryFilter } from '../../actions'
+import { gatCategoriesList } from '../../actions'
 import './categories.css'
 
 class Categories extends Component {
 
-    filterCategory = (e) => { 
-        console.log(e.target.id)
-        this.props.categoryFilter(e.target.id)
+    componentDidMount() {
+        this.props.gatCategoriesList()
+    }
+
+    filterCategory = (id) => {
+        console.log(id)
+        this.props.categoryFilter(id)
     }
 
     removeDuplicates = (originalArray, prop) => {
-    var newArray = [];
-    var lookupObject = {};
-    
-    for (var i in originalArray) {
-        lookupObject[originalArray[i][prop]] = originalArray[i];
-    }
+        var newArray = [];
+        var lookupObject = {};
 
-    for (i in lookupObject) {
-        newArray.push(lookupObject[i]);
+        for (var i in originalArray) {
+            lookupObject[originalArray[i][prop]] = originalArray[i];
+        }
+
+        for (i in lookupObject) {
+            newArray.push(lookupObject[i]);
+        }
+
+        return newArray;
     }
-    
-    return newArray;
-}
 
     render() {
-        let { dataList } = this.props,
-            { ProductCollection } = dataList
-        const temp = []
-        ProductCollection.filter(pro => temp.push({cat: pro.MainCategory}))
-const categoriesFilter = this.removeDuplicates(temp, "cat")
+        let { products, categories } = this.props
+        // { ProductCollection } = dataList
+        // const { products } = this.state
+                // const temp = []
+                // categories.filter(pro => temp.push({cat: pro.name, id: pro.id}))
+        // const categoriesFilter = this.removeDuplicates(temp, "cat")
 
         return <div className="categories"><h2>קטגוריות</h2>
-        <ul className="categories-list">{
-            categoriesFilter
-                .map(pro => <li onClick={this.filterCategory} id={pro.cat}>{pro.cat}</li>)
-        }</ul></div>
+            <ul className="categories-list"><li onClick={()=>this.filterCategory('')}>All</li>
+                {categories.map(prod => <li onClick={()=>this.filterCategory(prod.id)} >{prod.name}</li>)
+                }</ul></div>
     }
 
 }
 
 export default connect(state => ({
-    dataList: state.dataList
-}), {categoryFilter})(Categories)
+    products: state.products,
+    categories: state.categories,
+}), { categoryFilter, gatCategoriesList })(Categories)

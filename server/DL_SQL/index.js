@@ -119,7 +119,7 @@ async function del(table, id) {
 }
 
 
-read('products', 'HT-1000').then(res => console.log(res))
+// read('products', 'HT-1000').then(res => console.log(res))
 
 
 // con.connect(async err => {

@@ -5,11 +5,15 @@ list-style-type: none;
 border: 1px solid #eee;
 background-color: white;
 margin: 4px;
+border-top-right-radius: 34%;
+border-bottom-left-radius: 5%;
+border-bottom-right-radius: 5%;
 }
 
 .item-img {
     height: 130px;
     width: 130px;
+    border-top-right-radius: 50%;
 }
 .item-btn {
     width: 100%;
@@ -19,6 +23,7 @@ margin: 4px;
     background-color: #b1d426;
     color: #333;
     border-radius: 20px;
+    cursor: pointer;
 }
 .item p {
   color: #e83299;

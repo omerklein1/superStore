@@ -11,15 +11,14 @@ class Components extends Component {
     componentDidMount() {
         this.props.gatDataList()
     }
-
     onTextChange = (text) => {
         this.setState({ text })
     }
 
     render() {
-        const { dataList } = this.props
-console.log(this.props.dataList)
-        return dataList ? <main className='components'>
+        const { products } = this.props
+console.log(this.props.products)
+        return products ? <main className='components'>
             <Navbar />
             <Categories />
             <ProductsList className="countainer"/>
@@ -30,6 +29,6 @@ console.log(this.props.dataList)
 
 
 export default connect(state => ({
-    dataList: state.dataList
+    products: state.products
 }), { gatDataList })(Components)
 
