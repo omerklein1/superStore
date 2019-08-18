@@ -1,6 +1,6 @@
 // import axios from 'axios'
-    // import data from './dataPRO.json'
-    import axios from 'axios'
+// import data from './dataPRO.json'
+import axios from 'axios'
 
 // export const initList = () => dispatch => {
 //     axios.get('https://restcountries.eu/rest/v2/all')
@@ -11,42 +11,63 @@
 //         );
 // }
 export const change = (text) => dispatch => {
-    dispatch({payload: text, type: 'TEXT_READED'})
+    dispatch({ payload: text, type: 'TEXT_READED' })
 }
 
 export const gatDataList = () => async dispatch => {
-axios.get('http://localhost:1200/products')
-.then(res => {
-    dispatch({
-        type: 'DATA_READER',
-        payload: res.data })
-      })
-          .catch(error => dispatch({ payload: error.message, type: 'DATA_ERROR' })
+    axios.get('http://localhost:1200/products')
+        .then(res => {
+            dispatch({
+                type: 'DATA_READER',
+                payload: res.data
+            })
+        })
+        .catch(error => dispatch({ payload: error.message, type: 'DATA_ERROR' })
         );
-    }
+}
 
-    
 
-    export const gatCategoriesList = () => async dispatch => {
-        axios.get('http://localhost:1200/categories')
+
+export const gatCategoriesList = () => async dispatch => {
+    axios.get('http://localhost:1200/categories')
         .then(res => {
             dispatch({
                 type: 'CATEGORIES_READER',
-                payload: res.data })
-              })
-                  .catch(error => dispatch({ payload: error.message, type: 'CATEGORIES_ERROR' })
-                );
-            }
-        
+                payload: res.data
+            })
+        })
+        .catch(error => dispatch({ payload: error.message, type: 'CATEGORIES_ERROR' })
+        );
+}
 
-    export const categoryFilter = (id) => dispatch => {
-dispatch({
-  type: 'SENDING_DATA',
+
+export const categoryFilter = (id) => dispatch => {
+    dispatch({
+        type: 'SENDING_DATA',
         payload: id
-})
-    }
+    })
+}
 
-    export const addToCart = () => dispatch => {
+export const addToCart = (prod) => dispatch => {
+    console.log(prod)
+    dispatch({
+        type: 'ADD_TO_CART',
+        payload: prod
+    })
+}
 
-    }
+export const removeFromCart = (prod) => dispatch => {
+    dispatch({
+        type: 'REMOVE_FROM_CART',
+        payload: prod
+    })
+}
+
+export const emptyCart = () => dispatch => {
+    dispatch({
+        type: 'EMPTY_CART',
+        payload: ''
+    })
+}
+
 

@@ -31,7 +31,7 @@ class Categories extends Component {
     }
 
     render() {
-        let { products, categories } = this.props
+        let { categories } = this.props
         // { ProductCollection } = dataList
         // const { products } = this.state
                 // const temp = []

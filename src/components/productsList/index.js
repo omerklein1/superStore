@@ -10,14 +10,15 @@ class ProductsList extends Component {
 
     render() {
         let { products, id = '', text = '' } = this.props,
-            filter = []
+            filter
         
         
         if (text) {
             filter = products.filter(pro => pro.name.toLowerCase().startsWith(text))
             console.log(text, 'text')
         } else if(id){
-            filter = products.filter(pro => pro.categoryId == id)
+            filter = []
+            filter = products.filter(pro => pro.categoryId === id)
             console.log(id, 'id')
         } else{
             filter = products
