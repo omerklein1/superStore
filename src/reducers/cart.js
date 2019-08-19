@@ -1,16 +1,23 @@
 export default (state = [], data) => {
     switch (data.type) {
         case 'ADD_TO_CART':
+                let product = state.findIndex(p => p.id === data.payload.id)
+                console.log(product)
+                if(product >= 0) {
+                    state[product].amount++
+                    return [...state]
+                }else {
+                
             data.payload.amount = 1
-            return [data.payload, ...state];
+            return [data.payload, ...state]};
 
         case 'REMOVE_FROM_CART':
-            let product = state.findIndex(data.payload.id)
-            state[product].amount--
-            if(state[product].amount <= 0){
-                state.pop(state[product])
+       const prod = state.findIndex(p => p.id === data.payload.id)
+            state[prod].amount--
+            if(state[prod].amount <= 0){
+                state.pop(state[prod])
             }
-            return data.payload;
+            return [...state];
 
         // case 'REMOVE_FROM_CART':
         //     return error.message.payload;

@@ -10,32 +10,6 @@
     color: white
 }
 
-.img-user, .cart-img{
-height: 50px;
-width: 50px;
-border-radius: 50%;
-margin-right: 25px;
-margin-left: 20px;
-}
-.cart-img {
-    margin-right: 40px;
-}
 
-select {
-    border: 0;
-    width: 14px;
-    background-color: #b1d426;
-}
 
-.img-user , p {
-display: inline;
-}
 
-.cart-p1{
-    position: absolute;
-    top: 25px;
-}
-.cart-p2 {
-    position: relative;
-    bottom: 10px;
-}

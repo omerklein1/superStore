@@ -48,6 +48,14 @@ export const categoryFilter = (id) => dispatch => {
     })
 }
 
+export const changeTheBtn = (status) => dispatch => {
+    status? status = false : status = true
+    dispatch({
+        type: 'BTN_CHANGE',
+        payload: status
+    })
+}
+
 export const addToCart = (prod) => dispatch => {
     console.log(prod)
     dispatch({

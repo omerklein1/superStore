@@ -1,0 +1,9 @@
+select {
+    border: 0;
+    width: 14px;
+    background-color: #b1d426;
+}
+
+.img-user , p {
+display: inline;
+}

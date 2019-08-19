@@ -1,0 +1,10 @@
+.controlCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.controlCart li {
+    width: 33%;
+}
