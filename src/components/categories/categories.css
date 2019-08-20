@@ -2,8 +2,7 @@
     float: right;
     text-align: start;
     padding: 0;
-    position: fixed;
-    top: 120px;
+   margin-top: 120px;
 }
 
 .categories h2 {
