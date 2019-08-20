@@ -17,13 +17,12 @@ border-bottom-right-radius: 5%;
 }
 .item-btn {
     width: 100%;
-    background-color: #00000052;
-    margin-top: 11px;
     border: none;
     background-color: #b1d426;
     color: #333;
     border-radius: 20px;
     cursor: pointer;
+    height: 27px;
 }
 .item p {
   color: #e83299;
@@ -33,7 +32,7 @@ border-bottom-right-radius: 5%;
   font-weight: normal;
 }
 
-.item h5,p,button {
+.item h5,.item p,.item button {
     margin: 0;
     text-overflow: ellipsis; 
     overflow: hidden; 

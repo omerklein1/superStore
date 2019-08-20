@@ -28,7 +28,7 @@ class ProductsList extends Component {
         return <div className="productsList"><Search lengthList={filter.length} />
             <ul className="countainer" >
                 {filter.map(pro => <Product
-                    key={pro.name}
+                    key={pro.id}
                     {...pro}
                 />)
                 }</ul></div>

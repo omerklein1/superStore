@@ -6,5 +6,10 @@ max-width: 1000px;
     overflow: hidden;
     direction: rtl;
 }
+body {
+  overflow: hidden;
+}
+
+
 
 

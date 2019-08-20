@@ -17,7 +17,7 @@ changeTheBtn = () => {
 }
 
     addCart = p => {
-        const { products, } = this.props
+        const { products } = this.props
         console.log(this.state)
         this.setState({ cartButton: false })
         const result = products.find(prod => prod.name === p)

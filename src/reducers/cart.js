@@ -1,7 +1,7 @@
 export default (state = [], data) => {
     switch (data.type) {
         case 'ADD_TO_CART':
-                let product = state.findIndex(p => p.id === data.payload.id)
+                const product = state.findIndex(p => p.id === data.payload.id)
                 console.log(product)
                 if(product >= 0) {
                     state[product].amount++
@@ -14,8 +14,9 @@ export default (state = [], data) => {
         case 'REMOVE_FROM_CART':
        const prod = state.findIndex(p => p.id === data.payload.id)
             state[prod].amount--
+            console.log(state[prod].amount)
             if(state[prod].amount <= 0){
-                state.pop(state[prod])
+                state.splice(prod,1)
             }
             return [...state];
 

@@ -6,9 +6,11 @@ class User extends Component {
     render() {
         return <li className="user">
                 <img className="img-user" src="img/omer_klein.png" alt="user pic" />
-                <p>שלום שם משתמש<select>
+                <p>שלום <button>התחבר</button><button>הרשם</button>
+                {/* <select>
                     <option></option><option>התנתק</option>
-                    </select></p>
+                    </select> */}
+                    </p>
             </li>
     }
 }

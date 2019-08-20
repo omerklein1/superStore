@@ -39,6 +39,18 @@ export const gatCategoriesList = () => async dispatch => {
         .catch(error => dispatch({ payload: error.message, type: 'CATEGORIES_ERROR' })
         );
 }
+export const gatSubCategoriesList = () => async dispatch => {
+    axios.get('http://localhost:1200/subCategories')
+        .then(res => {
+            console.log(res.data)
+            dispatch({
+                type: 'SUBCATEGORIES_READER',
+                payload: res.data
+            })
+        })
+        .catch(error => dispatch({ payload: error.message, type: 'SUBCATEGORIES_ERROR' })
+        );
+}
 
 
 export const categoryFilter = (id) => dispatch => {
@@ -48,13 +60,13 @@ export const categoryFilter = (id) => dispatch => {
     })
 }
 
-export const changeTheBtn = (status) => dispatch => {
-    status? status = false : status = true
-    dispatch({
-        type: 'BTN_CHANGE',
-        payload: status
-    })
-}
+// export const changeTheBtn = (status) => dispatch => {
+//     status? status = false : status = true
+//     dispatch({
+//         type: 'BTN_CHANGE',
+//         payload: status
+//     })
+// }
 
 export const addToCart = (prod) => dispatch => {
     console.log(prod)

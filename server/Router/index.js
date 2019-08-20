@@ -34,15 +34,17 @@ const Router = app => {
 
     app.get('/categories', async (req, res) => {
 
-        // const { id } = req.params
-
-        // rest('tasks', id ? 'readOne' : 'read', id, res)
-
         const result = await BL.categories.read()
         res.send(result)
 
     })
 
+    app.get('/subCategories', async (req, res) => {
+
+        const result = await BL.subCategories.read()
+        res.send(result)
+
+    })
 
     app.post('/tasks', async (req, res) => {
 

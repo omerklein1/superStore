@@ -7,3 +7,13 @@ select {
 .img-user , p {
 display: inline;
 }
+
+ p button {
+    background-color: white;
+    border-radius: 15px;
+    color: #e83299;
+    border: none;
+    font-weight: bold;
+    margin: 2px;
+    cursor: pointer;
+}

@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { categoryFilter } from '../../actions'
 import { gatCategoriesList } from '../../actions'
+import { gatSubCategoriesList } from '../../actions'
 import './categories.css'
 
 class Categories extends Component {
 
     componentDidMount() {
         this.props.gatCategoriesList()
+        this.props.gatSubCategoriesList()
     }
 
     filterCategory = (id) => {
@@ -49,4 +51,5 @@ class Categories extends Component {
 export default connect(state => ({
     products: state.products,
     categories: state.categories,
-}), { categoryFilter, gatCategoriesList })(Categories)
+    subCategories: state.subCategories,
+}), { categoryFilter, gatCategoriesList, gatSubCategoriesList })(Categories)
