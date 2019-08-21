@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { addToCart } from '../../../../actions';
 import { removeFromCart } from '../../../../actions';
 import { connect } from 'react-redux'
-
-
 import './controlCart.css'
 
 class ControlCart extends Component {

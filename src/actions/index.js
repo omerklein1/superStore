@@ -90,4 +90,10 @@ export const emptyCart = () => dispatch => {
     })
 }
 
+export const adminState = (admin) => dispatch => {
+    dispatch({
+        type: 'CHANGE_ADMIN_STATE',
+        payload: !admin
+    })
+}
 

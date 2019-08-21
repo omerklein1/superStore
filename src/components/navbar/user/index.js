@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+import Login from './login'
 import './user.css'
 
 class User extends Component {
     constructor(props) {
         super(props);
-        this.state = { isLoggedIn: true };
+        this.state = {
+            isLoggedIn: true,
+            admin: false
+        };
     }
     handleClick = (isLoggedIn) => {
         this.setState({ isLoggedIn: true });
@@ -13,23 +17,19 @@ class User extends Component {
         this.setState({ isLoggedIn: false });
     }
 
+
     login = () => {
-        return 
+        return
     }
 
     render() {
-        let { isLoggedIn } = this.state
+        let { isLoggedIn, admin } = this.state
         return <li className="user">
             <img className="img-user" src="img/omer_klein.png" alt="user pic" />
-            <p>שלום </p>    
-            
-            {isLoggedIn? <><button onClick={()=>this.openPop()}>התחבר</button> <button onClick={()=>this.openPop()}>הרשם</button></> : <div className='popup'>
-            <div className='popup_inner'>
-                <h1>{this.props.text}</h1>
-                <button onClick={()=>this.handleClick()}>close me</button>
-            </div>
-        </div>}
-            
+            <p>שלום </p>
+
+            {isLoggedIn ? <><button onClick={() => this.openPop()}>התחבר</button> <button onClick={() => this.openPop()}>הרשם</button> <button onClick={() => this.setState({ admin: !admin })}>עבור למצב מנהל</button></> : <Login handleClick={this.handleClick} />}
+
 
         </li>
     }

@@ -1,0 +1,36 @@
+.cartItem {
+list-style: none;
+display: flex;
+justify-content: space-between;
+padding: 5px;
+margin: 0;
+align-items: center;
+}
+.cartItem img {
+    width: 40px;
+}
+.cartItem .name {
+    display: block;
+    width: calc(100% - 0px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.nameTitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+.cartBtn {
+    display: flex;
+}
+.cartBtn button {
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    color: #e83299;
+    height: 17px;
+    width: 19px;
+    margin: 1px;  
+    cursor: pointer;  
+}

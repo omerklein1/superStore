@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from "./navbar"
-import Login from './login'
+// import Login from './login'
 import Categories from './categories'
 import ProductsList from './productsList'
 import { connect } from 'react-redux'
