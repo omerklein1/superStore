@@ -20,7 +20,14 @@ const
 
         }
 
-       
+
+        async function update(item) {
+            if (!item.id) throw 'Must get id'
+            return DL.update('products', item)
+
+        }
+
+
 
         // async function update(task) {
 
@@ -34,7 +41,7 @@ const
 
         // }
 
-        return { /* create, */ read/* , readOne, update, del */ }
+        return { /* create, */ read, /* readOne, */ update, /* del */ }
 
     }
 

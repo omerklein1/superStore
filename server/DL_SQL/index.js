@@ -92,26 +92,21 @@ async function create(table, item) {
 
 
 
-async function read(table, idForFilter) {
-    if(idForFilter){
-        return query(`SELECT * FROM ${table} WHERE id='${idForFilter}'`)
-    }
-    return query(`SELECT * FROM ${table}`)
+async function read(table, id) {
+    let q = `SELECT * FROM ${table} `
+    if(id) q += `WHERE id='${id}'`
+    const res = await query(q)
+    return id? res[0] : res
 }    
 
 
 
-async function update(table, item, id) {
-    let textForUpdate;
-    for (let [key, value] of Object.entries(item)) {
-        if(Object.keys(item).length == Object.keys(item).findIndex(key) +1){
-            return textForUpdate += `${key} = '${value}'`
-        }
-        return textForUpdate += `${key} = '${value}', `
-    }
-    return query(`UPDATE ${table}
-    SET ${textForUpdate}
-    WHERE id = ${id};`)
+async function update(table, product) {
+const res = await query(`UPDATE ${table} SET name='${product.name}', image='${product.image}', price='${product.price}' WHERE id='${product.id}'`)
+
+if(res.affectedRows == 1)
+return read(table, product.id)
+throw 'update failed'
 }
 
 async function del(table, id) {

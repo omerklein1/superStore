@@ -1,38 +1,24 @@
 import React, { Component } from 'react'
-import Login from './login'
+import Modal from '../../modal'
+import { connect } from 'react-redux'
+import { adminState } from '../../../actions'
 import './user.css'
 
 class User extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isLoggedIn: true,
-            admin: false
-        };
-    }
-    handleClick = (isLoggedIn) => {
-        this.setState({ isLoggedIn: true });
-    }
-    openPop = () => {
-        this.setState({ isLoggedIn: false });
-    }
-
-
-    login = () => {
-        return
-    }
-
+    
     render() {
-        let { isLoggedIn, admin } = this.state
+        const { adminState, admin } = this.props
         return <li className="user">
             <img className="img-user" src="img/omer_klein.png" alt="user pic" />
             <p>שלום </p>
-
-            {isLoggedIn ? <><button onClick={() => this.openPop()}>התחבר</button> <button onClick={() => this.openPop()}>הרשם</button> <button onClick={() => this.setState({ admin: !admin })}>עבור למצב מנהל</button></> : <Login handleClick={this.handleClick} />}
-
+<button onClick={() => this.openPop()}>התחבר</button>
+ <button onClick={() => this.openPop()}>הרשם</button>
+  <button onClick={() => adminState(admin)}>{admin? 'מצב מנהל': 'עבור למצב מנהל'}</button>
 
         </li>
     }
 }
 
-export default User
+export default connect(state => ({
+    admin: state.admin
+}), { adminState })(User);
