@@ -40,7 +40,7 @@ class Categories extends Component {
                 // categories.filter(pro => temp.push({cat: pro.name, id: pro.id}))
         // const categoriesFilter = this.removeDuplicates(temp, "cat")
 
-        return <div className="categories"><h2>קטגוריות</h2>
+        return <div id="container" className="categories"><h2>קטגוריות</h2>
             <ul className="categories-list"><li onClick={()=>this.filterCategory('')}>All</li>
                 {categories.map(prod => <li onClick={()=>this.filterCategory(prod.id)} >{prod.name}</li>)
                 }</ul></div>

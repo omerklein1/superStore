@@ -9,7 +9,8 @@ class Signin extends Component {
 
         const { userName, password, conPassword, firstName, lastName, email, image } = this.refs
 
-        if(password !== conPassword) return alert('אימות סיסמא נכשל! אנא הזן את אותה הסיסמא ב2 השדות') 
+        // console.log('pass:', password , 'con:' , conPassword)
+        if(password.value !== conPassword.value) return alert('אימות סיסמא נכשל! אנא הזן את אותה הסיסמא ב2 השדות') 
 
         const newUser = {
             userName: userName.value,

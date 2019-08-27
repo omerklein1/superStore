@@ -17,6 +17,7 @@ h3 {
     background-color: white;
     color: #e83299;
     border-radius: 15px;
+    text-align: center;
 }
 
 .cartWindow.cartOpen {

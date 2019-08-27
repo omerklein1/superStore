@@ -19,7 +19,7 @@
     width: 400px;
     border-radius: 20px;
   }
-  .popup_inner button {
+  .popup_inner .modalBtn {
     position: absolute;
     top: 1px;
     left: 1px;

@@ -31,7 +31,10 @@ class ProductsList extends Component {
                     product={pro}
                     {...pro}
                 />)
-                }</ul></div>
+                }
+                <li className="try"> - </li>
+                </ul>
+                </div>
     }
 }
 

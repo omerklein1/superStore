@@ -21,7 +21,7 @@ class Login extends Component {
         let index, confirmed
 
         await axios.get('http://localhost:1200/users').then(res => {
-            users.push(res.data[0])
+            users.push(...res.data)
         })
             .catch(err => {
                 console.log(err)
@@ -52,7 +52,7 @@ class Login extends Component {
             <input className="submit" type='submit' value='התחבר' />
         </form>}
 
-            <p className="loginBtn">{signin ? 'נרשמת כבר? לחץ ' : 'אינך רשום? לחץ '}<p className="signinBtn" onClick={() => this.setState({ signin: !signin })}>כאן</p> </p>
+            <button className="loginBtn" onClick={() => this.setState({ signin: !signin })}>{signin ? 'נרשמת כבר? לחץ כאן' : 'אינך רשום? לחץ כאן'}</button>
         </div>
     }
 }

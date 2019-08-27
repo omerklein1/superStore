@@ -24,3 +24,8 @@
     /* width: 0px; */
     background: transparent;
 }
+.try{
+display: block;
+height: 160px;
+width: 100%;
+}

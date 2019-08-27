@@ -20,7 +20,7 @@ if(prevProps.open !== this.props.open){
         const {open} = this.state
         return open? <div className='popup' /* onClick={()=> this.setState({ open: false})} */ >
             <div className='popup_inner'>
-                <button onClick={()=> this.setState({ open: false})}>X</button>
+                <button className="modalBtn" onClick={()=> this.setState({ open: false})}>X</button>
                 <h3>{title}</h3>
                 <div>{children}</div>
             </div>
