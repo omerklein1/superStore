@@ -39,7 +39,7 @@ class Product extends Component {
             <Modal open={updateMode} title={`עריכת מוצר: ${name}`}>
                 <UpdatProduct product={product}/>
             </Modal>
-            <li className='item'>
+            <li className={ admin? 'item edit' : 'item'}>
                 <img className="item-img" src={image} alt="item pic" />
                 <h5 className="tooltip">{name}</h5>
                 <span className="tooltiptext">{name}</span>

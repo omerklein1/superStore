@@ -17,3 +17,9 @@ display: inline;
     margin: 2px;
     cursor: pointer;
 }
+
+.user {
+    width: 35%;
+    text-align: start;
+    margin-right: 25px;
+}

@@ -16,7 +16,7 @@
 .productsList {
     max-width: 700px;
     float: left;
-    padding-top: 120px;
+    /* padding-top: 120px; */
     height: -webkit-fill-available;
     overflow-y: scroll;
 }

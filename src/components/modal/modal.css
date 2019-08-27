@@ -14,13 +14,20 @@
     left: 25%;
     right: 25%;
     top: 25%;
-    bottom: 25%;
     margin: auto;
     background: white;
     width: 400px;
+    border-radius: 20px;
   }
   .popup_inner button {
     position: absolute;
     top: 1px;
     left: 1px;
+    background-color: white;
+    color: #e83299;
+    border: none;
+    font-weight: bold;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 20px;
   }

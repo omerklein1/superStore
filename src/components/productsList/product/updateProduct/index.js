@@ -29,7 +29,7 @@ class UpdateProduct extends Component {
 
         console.log('product', this.props.product)
         const { product = {} } = this.props
-        return <form onSubmit={this.submit}>
+        return <form className="updateProduct" onSubmit={this.submit}>
             <label>
                 <span>שם:</span>
                 <input ref='name' defaultValue={product.name} type='text' placeholder='שם המוצר' required />

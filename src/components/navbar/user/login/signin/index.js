@@ -7,7 +7,9 @@ class Signin extends Component {
     submit = (e) => {
         e.preventDefault()
 
-        const { userName, password, firstName, lastName, email, image } = this.refs
+        const { userName, password, conPassword, firstName, lastName, email, image } = this.refs
+
+        if(password !== conPassword) return alert('אימות סיסמא נכשל! אנא הזן את אותה הסיסמא ב2 השדות') 
 
         const newUser = {
             userName: userName.value,

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Singin from './signin'
 import './login.css'
-import { async } from 'q';
 
 class Login extends Component {
     constructor() {
@@ -16,8 +15,9 @@ class Login extends Component {
     submit = async (e) => {
         e.preventDefault()
 
-        const { userName, password } = this.refs, users = []
-
+        const { userName, password } = this.refs,
+            users = [],
+            { getUser, closeLogin } = this.props
         let index, confirmed
 
         await axios.get('http://localhost:1200/users').then(res => {
@@ -31,12 +31,16 @@ class Login extends Component {
         if (index === -1) return alert('שם משתמש אינו נמצא במערכת')
         confirmed = users.find(user => user.password === password.value)
         if (!confirmed) alert('סיסמא שגויה - אנא נסה שוב')
-        else { alert(`ברוכים הבאים לאתר ${userName.value}`) }
+        else {
+            alert(`ברוכים הבאים לאתר ${userName.value}`)
+            closeLogin()
+            return getUser(users[index])
+        }
     }
 
     render() {
         const { signin } = this.state
-        return <> {signin ? <Singin /> : <form className='login' onSubmit={this.submit}>
+        return <div className="loginForm"> {signin ? <Singin /> : <form className='login' onSubmit={this.submit}>
             <label>
                 <span>שם משתמש:</span>
                 <input ref='userName' type='text' placeholder='שם משתמש' required />
@@ -48,8 +52,8 @@ class Login extends Component {
             <input className="submit" type='submit' value='התחבר' />
         </form>}
 
-            <p>{signin ? 'נרשמת כבר? לחץ ' : 'אינך רשום? לחץ '}<p className="signinBtn" onClick={() => this.setState({ signin: !signin })}>כאן</p> </p>
-        </>
+            <p className="loginBtn">{signin ? 'נרשמת כבר? לחץ ' : 'אינך רשום? לחץ '}<p className="signinBtn" onClick={() => this.setState({ signin: !signin })}>כאן</p> </p>
+        </div>
     }
 }
 

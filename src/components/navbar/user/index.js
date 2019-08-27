@@ -15,16 +15,24 @@ class User extends Component {
         }
     }
 
+    getUser = user => {
+this.setState({ user: user})
+    }
+
+    closeLogin = () => {
+this.setState({openLogin: false})
+    }
+
     render() {
         const { adminState, admin } = this.props,
-            { openLogin, addProduct } = this.state
+            { openLogin, addProduct, user } = this.state
         return <li className="user">
-            <img className="img-user" src="img/omer_klein.png" alt="user pic" />
-            <p>שלום </p>
-            <button onClick={() => this.setState({ openLogin: !openLogin })}>התחבר</button>
-            <button onClick={() => adminState(admin)}>{admin ? 'מצב מנהל' : 'עבור למצב מנהל'}</button>
+            <img className="img-user" src={user? user.image : 'https://static.thenounproject.com/png/17241-200.png'} alt="user pic" />
+            <p>{user? `שלום ${user.userName}` : null}</p>
+            <button onClick={() => this.setState(user? {user: ''} : {openLogin: !openLogin})}>{user? 'התנתק' : 'התחבר'}</button>
+            { user? <button onClick={() => adminState(admin)}>{admin ? 'מצב מנהל' : 'עבור למצב מנהל'}</button> : null}
             <Modal open={openLogin} title="התחבר לאתר">
-                <Login />
+                <Login getUser={this.getUser} closeLogin={this.closeLogin}/>
             </Modal>
 
             {admin? <><button onClick={() => this.setState({ addProduct: !addProduct })}> + הוסף מוצר חדש</button><Modal open={addProduct} title="הוסף מוצר חדש">
