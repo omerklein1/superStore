@@ -2,3 +2,11 @@ props {
     color: #e83299;
     font-weight: bold
 }
+.search {
+    border-radius: 5px;
+    border-color: transparent;
+    margin-right: 50%;
+    border-radius: 20px;
+    background-color: #b1d426;
+    color: white
+}

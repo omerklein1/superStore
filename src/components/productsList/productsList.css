@@ -11,12 +11,7 @@
     display: inline;
 }
 .productsList input {
-    border-radius: 5px;
-    border-color: transparent;
-    margin-right: 50%;
-    border-radius: 20px;
-    background-color: #b1d426;
-    color: white
+  
 }
 .productsList {
     max-width: 700px;

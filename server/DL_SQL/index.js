@@ -1,112 +1,62 @@
-
-// const addId = (object) => {
-//     let i = 1;
-//     object.forEach(e => { e.id = i; e.icon = 'none'; i++ })
-//     return object
-// }
-
-// const changeId = (arrayChange, dataArray, same, diffrent) => {
-//     arrayChange.forEach(s => {
-// let i = dataArray.findIndex(c => s[same] == c[same])
-// s[diffrent] = dataArray[i].id
-// })
-// }
-
-// function removeDuplicates(originalArray, prop) {
-//     var newArray = [];
-//     var lookupObject = {};
-    
-//     for (var i in originalArray) {
-//         lookupObject[originalArray[i][prop]] = originalArray[i];
-//     }
-
-//     for (i in lookupObject) {
-//         newArray.push(lookupObject[i]);
-//     }
-    
-//     return newArray;
-// }
-
-
-
-// const dataJSON = require('./dataPRO'),
-//     jsonfile = require('jsonfile'),
-//     { ProductCollection } = dataJSON;
-//     let temp = [],
-//     category = [],
-//     subCategory = [];
-
-    
-// ProductCollection.filter(i => temp.push({ subCategory: i.subCategory, category: i.category }))
-// category = removeDuplicates(temp, 'category')
-// subCategory = removeDuplicates(temp, 'subCategory')
-
-// temp = []
-
-// category.forEach(c => {
-//     temp.push({ category: c.category })
-// });
-
-// category = temp;
-// addId(category)
-// addId(subCategory)
-
-// changeId(subCategory, category, "category", "categoryId")
-// changeId(ProductCollection, category, "category", "categoryId")
-// changeId(ProductCollection, subCategory, "subCategory", "subCategoryId")
-
-// jsonfile.writeFileSync('subCategories.json', subCategory);
-// jsonfile.writeFileSync('categories.json', category);
-// jsonfile.writeFileSync('dataAfterChange.json', ProductCollection);
-
-// const data = require('./dataAfterChange'),
-// categories = require('./categories'),
-// subCategories = require('./subCategories');
-
 const mysql = require('mysql'),
-   database = "LW2xRNJF3p",
-   con = mysql.createConnection({
-       host: 'remotemysql.com',
-       user: database,
-       password: 'mWdlJHyUkU',
-       database
-   })
+    database = "LW2xRNJF3p",
+    con = mysql.createConnection({
+        host: 'remotemysql.com',
+        user: database,
+        password: 'mWdlJHyUkU',
+        database
+    })
 
 
-   function query(sqlString) {
-       return new Promise((resolve, reject) => {
-           con.query(sqlString, (err, result) => {
+function query(sqlString) {
+    return new Promise((resolve, reject) => {
+        con.query(sqlString, (err, result) => {
 
-               if (err) reject(err.sqlMessage || err)
-               resolve(result)
+            if (err) reject(err.sqlMessage || err)
+            resolve(result)
 
-           })
-       })
-    }
+        })
+    })
+}
 
 
 async function create(table, item) {
-    return query(`INSERT INTO ${table} (id, name, categoryId)
-    VALUES ('${item.id}', '${item.name}', '${item.categoryId}')`)
+    let keys = Object.keys(item),
+        values = '';
+
+    for (let i = 0; i < keys.length; i++) {
+        if (i == keys.length - 1){values += `'${item[keys[i]]}'`}
+        else {values += `'${item[keys[i]]}', `}
+    }
+
+    console.log(`INSERT INTO ${table} (${keys.join(', ')})
+    VALUES (${values})`)
+    
+    const res = await query(`INSERT INTO ${table} (${keys.join(', ')})
+    VALUES (${values})`)
+    if (res.affectedRows == 1)
+        return read(table, product.id)
+    throw 'create failed'
 }
 
 
 
 async function read(table, id) {
     let q = `SELECT * FROM ${table} `
-    if(id) q += `WHERE id='${id}'`
+    if (id) q += `WHERE id='${id}'`
     const res = await query(q)
-    return id? res[0] : res
-}    
+    return id ? res[0] : res
+}
 
 
 
 async function update(table, product) {
-const res = await query(`UPDATE ${table} SET name='${product.name}', image='${product.image}', price='${product.price}' WHERE id='${product.id}'`)
 
-if(res.affectedRows == 1)
-return read(table, product.id)
-throw 'update failed'
+    const res = await query(`UPDATE ${table} SET name='${product.name}', image='${product.image}', price='${product.price}' WHERE id='${product.id}'`)
+    console.log(res)
+    if (res.affectedRows == 1)
+        return read(table, product.id)
+    throw 'update failed'
 }
 
 async function del(table, id) {

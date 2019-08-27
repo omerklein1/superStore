@@ -28,6 +28,7 @@ const Router = app => {
         try {
             const { body } = req,
             result = await BL.products.update(body)
+            console.log('result', result)
             res.send(result)
         }
         catch (err) {
@@ -35,6 +36,36 @@ const Router = app => {
         }
     })
 
+    app.put('/newProduct', async (req, res) => {
+        try {
+            const { body } = req,
+            result = await BL.products.create(body)
+            console.log('result', result)
+            res.send(result)
+        }
+        catch (err) {
+            res.send(err)
+        }
+    })
+
+    app.put('/signin', async (req, res) => {
+        try {
+            const { body } = req,
+            result = await BL.users.create(body)
+            console.log('result', result)
+            res.send(result)
+        }
+        catch (err) {
+            res.send(err)
+        }
+    })
+    app.get('/users', async (req, res) => {
+
+
+        const result = await BL.users.read()
+        res.send(result)
+
+    })
     // app.post('/tasks', async (req, res) => {
 
     //     const { body } = req

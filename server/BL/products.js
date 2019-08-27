@@ -2,17 +2,13 @@ const
     uniqid = require('uniqid'),
     Products = DL => {
 
-        // async function create(task) {
+        async function create(product) {
 
-        //     if (!task.name) throw 'please add name'
-        //     if (typeof task.name != 'string') throw 'name must be string'
+            if (!product.name) throw 'please add name'
+            if (typeof product.name != 'string') throw 'name must be string'
 
-        //     task.id = uniqid()
-        //     task.status = 'new'
-
-        //     return DL.create(task)
-
-        // }
+                        return DL.create('products' , product)
+        }
 
         async function read() {
 
@@ -21,9 +17,9 @@ const
         }
 
 
-        async function update(item) {
-            if (!item.id) throw 'Must get id'
-            return DL.update('products', item)
+        async function update(product) {
+            if (!product.id) throw 'Must get id'
+            return DL.update('products', product)
 
         }
 
@@ -41,7 +37,7 @@ const
 
         // }
 
-        return { /* create, */ read, /* readOne, */ update, /* del */ }
+        return { create, read, /* readOne, */ update, /* del */ }
 
     }
 

@@ -1,3 +1,27 @@
-label    {
-    display: block;
-}
+
+ form {
+    display: flex;
+    flex-direction: column;
+    /* text-align: start; */
+    margin-right: 15px;
+    color: #e83299;
+    font-weight: bold;
+ }
+
+ form input {
+    border-radius: 20px;
+    border: none;
+    background-color: #b1d426;
+    margin: 5px;
+ }
+ form input::after {
+     border-radius: 20px;
+ }
+
+ .submit {
+    width: 75%;
+    color: #333;
+    cursor: pointer;
+    height: 27px;
+    margin: auto;
+ }

@@ -12,7 +12,7 @@ class Search extends Component {
  
     render() {
         return <><h2>מוצרים</h2><props>({this.props.lengthList})</props>
-        <input onChange={this.changeText} type="search" placeholder="חפש"></input>
+        <input className="search" onChange={this.changeText} type="search" placeholder="חפש"></input>
     </>
     }
 }

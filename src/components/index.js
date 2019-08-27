@@ -18,7 +18,6 @@ class Components extends Component {
 
     render() {
         const { products } = this.props
-console.log(this.props.products)
         return products ? <main className='components'>
             <Navbar />
             <Categories />

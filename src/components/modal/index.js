@@ -9,7 +9,7 @@ constructor(props){
 }
 
 componentDidUpdate(prevProps){
-if(prevProps.open != this.props.open){
+if(prevProps.open !== this.props.open){
     this.setState({
         open: this.props.open
     })
@@ -18,7 +18,7 @@ if(prevProps.open != this.props.open){
     render() {
         const { children, title } = this.props
         const {open} = this.state
-        return open? <div className='popup' /* onClick={()=> this.setState({ open: false})} */>
+        return open? <div className='popup' /* onClick={()=> this.setState({ open: false})} */ >
             <div className='popup_inner'>
                 <button onClick={()=> this.setState({ open: false})}>X</button>
                 <h3>{title}</h3>

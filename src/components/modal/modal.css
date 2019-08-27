@@ -17,6 +17,7 @@
     bottom: 25%;
     margin: auto;
     background: white;
+    width: 400px;
   }
   .popup_inner button {
     position: absolute;

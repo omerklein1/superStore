@@ -5,7 +5,7 @@ class Title extends Component {
 
     render() {
         return <li>
-                <h1>החנות של עומר</h1>
+                <h1>ElectroKlein</h1>
             </li>
     }
 }
