@@ -31,14 +31,17 @@ this.setState({openLogin: false})
             <p>{user? `שלום ${user.userName}` : null}</p>
             <button onClick={() => this.setState(user? {user: ''} : {openLogin: !openLogin})}>{user? 'התנתק' : 'התחבר'}</button>
             { user? <button onClick={() => adminState(admin)}>{admin ? 'מצב מנהל' : 'עבור למצב מנהל'}</button> : null}
+            {admin? <><button  onClick={() => this.setState({ addProduct: !addProduct })}> + הוסף מוצר חדש</button>
+            <Modal open={addProduct} title="הוסף מוצר חדש">
+                <AddNewProduct />
+                </Modal>
+                
+                </> : null}
         </li>
             <Modal open={openLogin} title="התחבר לאתר">
                 <Login getUser={this.getUser} closeLogin={this.closeLogin}/>
             </Modal>
 
-            {admin? <><button onClick={() => this.setState({ addProduct: !addProduct })}> + הוסף מוצר חדש</button><Modal open={addProduct} title="הוסף מוצר חדש">
-                <AddNewProduct />
-                </Modal></> : null}
                 </>
     }
 }

@@ -18,7 +18,7 @@ class UpdateProduct extends Component {
         }
         axios.put('http://localhost:1200/products', newProduct).then(res => {
             console.log('submit', res.data)
-            window.location.reload()
+            
         })
             .catch(err => {
                 console.log(err)

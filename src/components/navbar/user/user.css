@@ -8,7 +8,7 @@ select {
 display: inline;
 }
 
-.user button {
+.user button, .btnPlus {
     background-color: white;
     border-radius: 15px;
     color: #e83299;

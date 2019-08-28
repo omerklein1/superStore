@@ -6,6 +6,12 @@ import { gatSubCategoriesList } from '../../actions'
 import './categories.css'
 
 class Categories extends Component {
+    constructor() {
+        super()
+        this.state = {
+            show: false
+        }
+    }
 
     componentDidMount() {
         this.props.gatCategoriesList()
@@ -33,17 +39,17 @@ class Categories extends Component {
     }
 
     render() {
-        let { categories } = this.props
-        // { ProductCollection } = dataList
-        // const { products } = this.state
-                // const temp = []
-                // categories.filter(pro => temp.push({cat: pro.name, id: pro.id}))
-        // const categoriesFilter = this.removeDuplicates(temp, "cat")
+        let { categories, subCategories } = this.props
+        let {show} = this.state
 
         return <div id="container" className="categories"><h2>קטגוריות</h2>
-            <ul className="categories-list"><li onClick={()=>this.filterCategory('')}>All</li>
-                {categories.map(prod => <li onClick={()=>this.filterCategory(prod.id)} >{prod.name}</li>)
-                }</ul></div>
+            <ul className="categories-list dropdown"><li onClick={() => this.filterCategory('')}>All</li>
+                {categories.map(cat => <> { <li onClick={() => this.filterCategory(cat.id)}>{cat.name}</li>}
+                {/* {show? subCategories.filter(sub=> sub.categoryId === cat.id).map(sub=> <li>{sub.name}</li>) : null} */}
+                </>
+                )}
+            </ul>
+        </div>
     }
 
 }

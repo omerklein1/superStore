@@ -43,7 +43,9 @@ async function create(table, item) {
 
 async function read(table, id) {
     let q = `SELECT * FROM ${table} `
+    
     if (id) q += `WHERE id='${id}'`
+
     const res = await query(q)
     return id ? res[0] : res
 }

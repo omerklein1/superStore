@@ -15,4 +15,5 @@ app.use(express.static('../public'))
 
 router(app)
 
-app.listen(1200, () => console.log(`Server is running: at port: 1200`))
+const port = process.env.PORT || 1200
+app.listen(port, () => console.log(`Server is running: at port: ${port}`))
