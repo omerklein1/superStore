@@ -20,7 +20,7 @@ class Signin extends Component {
             email: email.value,
             image: image.value
          }
-    axios.put('http://https://omerstore.herokuapp.com/signin', newUser).then(res => {
+    axios.put('https://omerstore.herokuapp.com/signin', newUser).then(res => {
         console.log('submit', res.data)
 window.location.reload()
         })

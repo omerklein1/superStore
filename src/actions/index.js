@@ -15,7 +15,7 @@ export const change = (text) => dispatch => {
 }
 
 export const gatDataList = () => async dispatch => {
-    axios.get('http://https://omerstore.herokuapp.com/products')
+    axios.get('https://omerstore.herokuapp.com/products')
         .then(res => {
             dispatch({
                 type: 'DATA_READER',
@@ -29,7 +29,7 @@ export const gatDataList = () => async dispatch => {
 
 
 export const gatCategoriesList = () => async dispatch => {
-    axios.get('http://https://omerstore.herokuapp.com/categories')
+    axios.get('https://omerstore.herokuapp.com/categories')
         .then(res => {
             dispatch({
                 type: 'CATEGORIES_READER',
@@ -40,7 +40,7 @@ export const gatCategoriesList = () => async dispatch => {
         );
 }
 export const gatSubCategoriesList = () => async dispatch => {
-    axios.get('http://https://omerstore.herokuapp.com/subCategories')
+    axios.get('https://omerstore.herokuapp.com/subCategories')
         .then(res => {
             console.log(res.data)
             dispatch({
