@@ -20,7 +20,7 @@ class Login extends Component {
             { getUser, closeLogin } = this.props
         let index, confirmed
 
-        await axios.get('http://localhost:1200/users').then(res => {
+        await axios.get('http://https://omerstore.herokuapp.com/users').then(res => {
             users.push(...res.data)
         })
             .catch(err => {

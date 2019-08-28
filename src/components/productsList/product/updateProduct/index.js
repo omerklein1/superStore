@@ -16,7 +16,7 @@ class UpdateProduct extends Component {
             price: price.value,
             image: image.value
         }
-        axios.put('http://localhost:1200/products', newProduct).then(res => {
+        axios.put('http://https://omerstore.herokuapp.com/products', newProduct).then(res => {
             console.log('submit', res.data)
             
         })

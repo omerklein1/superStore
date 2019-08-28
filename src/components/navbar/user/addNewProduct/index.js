@@ -24,7 +24,7 @@ class AddNewProduct extends Component {
             price: price.value,
             subCategoryId: subCategoryId.value
         }
-        axios.put('http://localhost:1200/newProduct', newProduct).then(res => {
+        axios.put('http://https://omerstore.herokuapp.com/newProduct', newProduct).then(res => {
             console.log('submit', res.data)
             window.location.reload()
         })
