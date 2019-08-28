@@ -17,12 +17,15 @@ export const change = (text) => dispatch => {
 export const gatDataList = () => async dispatch => {
     axios.get('https://omerstore.herokuapp.com/products')
         .then(res => {
+            debugger
             dispatch({
                 type: 'DATA_READER',
                 payload: res.data
             })
         })
-        .catch(error => dispatch({ payload: error.message, type: 'DATA_ERROR' })
+        .catch(error => {
+            debugger
+            dispatch({ payload: error.message, type: 'DATA_ERROR' })}
         );
 }
 

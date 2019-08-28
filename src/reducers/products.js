@@ -1,10 +1,10 @@
-    export default (state = [], data, error) => {
+    export default (state = [], data) => {
     switch (data.type) {
         case 'DATA_READER':
             return data.payload;
     
             case 'DATA_ERROR':
-                return error.message.payload;
+                return data.payload;
 
         default:
             return state;
