@@ -3,14 +3,6 @@ const BL = require('../BL')
 
 const Router = app => {
 
-    app.get('/', async (req, res) => {
-
-
-        res.send('hiiiii')
-
-    })
-
-
     app.get('/products', async (req, res) => {
 
 
