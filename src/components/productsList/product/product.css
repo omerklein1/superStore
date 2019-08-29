@@ -70,15 +70,7 @@ opacity: 1;
     visibility: visible;
   }
 
-  @media only screen and (max-width: 600px) {
-    .productsList {
-      height: 100% !important;
-      overflow-y: auto !important;
-    }
-    .App, body {
-      overflow: unset !important;
-    }
-  }
+ 
 
 
 

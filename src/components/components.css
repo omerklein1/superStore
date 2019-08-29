@@ -8,3 +8,39 @@ ul {
 .component {
     margin-bottom: 81px;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .productsList {
+      overflow-y: auto !important;
+      height: 100% !important;
+    }
+    .App, body {
+      overflow: unset !important;
+    }
+    .categories {
+      float: none !important;
+    }
+
+    .categories h2 {
+      text-align: center !important;
+    }
+
+    .search {
+      margin: auto !important;
+    }
+
+    .cart, .user {
+      margin: 0 !important;
+      text-align: center !important;
+      width: 100% !important;
+    }
+
+    .popup_inner {
+      left: 0 !important;
+      right: 0 !important;
+    }
+    .navbar {
+        display: block !important;
+    }
+  }

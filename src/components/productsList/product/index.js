@@ -31,15 +31,26 @@ class Product extends Component {
         this.setState({ updateMode: product })
     }
 
+    // info = () => {
+    //     this.setState({ info: 'on' })
+    // }
+
     render() {
         const { name, image, price, admin, product } = this.props;
-        let { cartButton, updateMode } = this.state
-        
+        let { cartButton, updateMode } = this.state,
+            keys = Object.keys(product)
+
+
         return <>
             <Modal open={updateMode} title={`עריכת מוצר: ${name}`}>
-                <UpdatProduct product={product}/>
+                <UpdatProduct product={product} />
             </Modal>
-            <li id="item" className={ admin? 'item edit' : 'item'}>
+            {/* <Modal open={updateMode} title={name}>
+                <ul>
+                    {keys.map(key=> <li>{`${key}: ${product.key}`}</li>)}
+                </ul>
+            </Modal> */}
+            <li id="item" className={admin ? 'item edit' : 'item'} >
                 <img className="item-img" src={image} alt="item pic" />
                 <h5 className="tooltip">{name}</h5>
                 <span className="tooltiptext">{name}</span>
