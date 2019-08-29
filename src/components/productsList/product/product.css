@@ -8,7 +8,11 @@ margin: 4px;
 border-top-right-radius: 34%;
 border-bottom-left-radius: 5%;
 border-bottom-right-radius: 5%;
+transition: opacity 0.5s;
 }
+/* #item:hover ~ #item-btn {
+opacity: 1;
+}  */
 .edit {
   animation-delay: -.05s;
   animation-duration: .27s;
@@ -28,6 +32,7 @@ border-bottom-right-radius: 5%;
     border-radius: 20px;
     cursor: pointer;
     height: 27px;
+    opacity: 1;
 }
 .item p {
   color: #e83299;
@@ -64,6 +69,19 @@ border-bottom-right-radius: 5%;
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
+
+  @media only screen and (max-width: 600px) {
+    .productsList {
+      height: 100% !important;
+      overflow-y: auto !important;
+    }
+    .App, body {
+      overflow: unset !important;
+    }
+  }
+
+
+
 
   /* .edit:nth-child(2n) {
     animation-name: keyframes1;

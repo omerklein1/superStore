@@ -39,12 +39,12 @@ class Product extends Component {
             <Modal open={updateMode} title={`עריכת מוצר: ${name}`}>
                 <UpdatProduct product={product}/>
             </Modal>
-            <li className={ admin? 'item edit' : 'item'}>
+            <li id="item" className={ admin? 'item edit' : 'item'}>
                 <img className="item-img" src={image} alt="item pic" />
                 <h5 className="tooltip">{name}</h5>
                 <span className="tooltiptext">{name}</span>
                 <p>₪{price}</p>
-                {admin ? <button className="item-btn" onClick={() => this.edit({ product })}>עריכה</button> : <button className="item-btn" onClick={cartButton ? () => this.addCart(name) : null} >{cartButton ? 'הוסף לסל' : <ControlCart  {...this.props} changeTheBtn={this.changeTheBtn} />}</button>}
+                {admin ? <button id="item-btn" className="item-btn" onClick={() => this.edit({ product })}>עריכה</button> : <button id="item-btn" className="item-btn" onClick={cartButton ? () => this.addCart(name) : null} >{cartButton ? 'הוסף לסל' : <ControlCart  {...this.props} changeTheBtn={this.changeTheBtn} />}</button>}
             </li>
         </>
     }
