@@ -40,6 +40,7 @@ ul {
     .popup_inner {
       left: 0 !important;
       right: 0 !important;
+      width: 100%;
     }
     .navbar {
         display: block !important;
