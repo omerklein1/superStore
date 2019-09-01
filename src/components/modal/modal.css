@@ -15,7 +15,8 @@
     right: 25%;
     top: 25%;
     margin: auto;
-    background: white;
+    /* background: white; */
+    background-image: linear-gradient(to bottom right, #8c9ca4 , #ffba00c9);
     width: 400px;
     border-radius: 20px;
   }
@@ -23,8 +24,8 @@
     position: absolute;
     top: 1px;
     left: 1px;
-    background-color: white;
-    color: #e83299;
+    background-color: #fff0;
+    color: #a80909;
     border: none;
     font-weight: bold;
     margin: 2px;

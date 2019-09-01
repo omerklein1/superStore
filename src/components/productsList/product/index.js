@@ -36,7 +36,7 @@ class Product extends Component {
     // }
 
     render() {
-        const { name, image, price, admin, product } = this.props;
+        const { name, image, price, admin, product /* description */ } = this.props;
         let { cartButton, updateMode } = this.state,
             keys = Object.keys(product)
 
@@ -53,8 +53,8 @@ class Product extends Component {
             <li id="item" className={admin ? 'item edit' : 'item'} >
                 <img className="item-img" src={image} alt="item pic" />
                 <h5 className="tooltip">{name}</h5>
-                <span className="tooltiptext">{name}</span>
                 <p>₪{price}</p>
+                {/* <prop>{description}</prop> */}
                 {admin ? <button id="item-btn" className="item-btn" onClick={() => this.edit({ product })}>עריכה</button> : <button id="item-btn" className="item-btn" onClick={cartButton ? () => this.addCart(name) : null} >{cartButton ? 'הוסף לסל' : <ControlCart  {...this.props} changeTheBtn={this.changeTheBtn} />}</button>}
             </li>
         </>

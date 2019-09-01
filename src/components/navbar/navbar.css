@@ -5,13 +5,39 @@
     justify-content: space-between;
     direction: rtl;
     padding: 5px;
-    background-color: #b1d426;
+    /* background-color: transparent; */
     border-radius: 50px;
     color: white;
-    /* position: fixed; */
     width: 100%;
     max-width: 1000px;
     margin-top: auto;
+    /* position: fixed; */
+}
+
+/* html:not([data-scroll='0']) {
+
+    .navbar {
+    background-color: transparent;
+}
+
+} */
+
+.home-img {
+    width: 100%;
+}
+.home-title {
+    top: 323px;
+    position: absolute;
+    right: 20%;
+    left: 20%;
+    font-size: 4.5em;
+    color: white;
+    text-decoration: unset;
+}
+
+#start {
+    height: 65px    ;
+        background-color: #000c;
 }
 
 

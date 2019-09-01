@@ -9,9 +9,9 @@ width: 90%;
 margin: inherit;
 }
 .loginBtn {
-    color: #e83299;
-    font-weight: bold;
-    background-color: white;
+    color: #a80909;
+    font-weight: 700;
+    background-color: #fff0;
     border: none;
     cursor: pointer;
     font-size: 1.1em;

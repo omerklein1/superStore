@@ -42,7 +42,8 @@ class Categories extends Component {
         let { categories, subCategories } = this.props
         let {show} = this.state
 
-        return <div id="container" className="categories"><h2>קטגוריות</h2>
+        return <div id="container" className="categories">
+            {/* <h2>קטגוריות</h2> */}
             <ul className="categories-list dropdown"><li onClick={() => this.filterCategory('')}>All</li>
                 {categories.map(cat => <> { <li onClick={() => this.filterCategory(cat.id)}>{cat.name}</li>}
                 {/* {show? subCategories.filter(sub=> sub.categoryId === cat.id).map(sub=> <li>{sub.name}</li>) : null} */}

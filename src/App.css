@@ -2,13 +2,13 @@
   text-align: center;
   margin: auto;
 max-width: 1010px;
-  background-color: white;
     overflow: hidden;
     direction: rtl;
 }
 body {
   overflow: hidden;
-  height: 110%;
+  /* height: 110%; */
+  background-image: linear-gradient(to bottom right, #8c9ca4 , #ffba00c9);
 }
 
 

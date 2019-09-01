@@ -22,10 +22,13 @@ class Signin extends Component {
          }
     axios.put('https://omerstore.herokuapp.com/signin', newUser).then(res => {
         console.log('submit', res.data)
+        alert('הרישום בוצע בהצלחה! , ניתן להתחבר על-ידי הזנת שם משתמש וסיסמא. בהצלחה!')
 window.location.reload()
         })
             .catch (err => {
+                alert('הרישום נכשל - אנא נסה שנית.')
     console.log(err)
+
 })
     }
 

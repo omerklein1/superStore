@@ -1,7 +1,7 @@
 select {
     border: 0;
     width: 14px;
-    background-color: #b1d426;
+    background-color: transparent;
 }
 
 .img-user , p {
@@ -11,7 +11,7 @@ display: inline;
 .user button, .btnPlus {
     background-color: white;
     border-radius: 15px;
-    color: #e83299;
+    color: #a80909;
     border: none;
     font-weight: bold;
     margin: 2px;

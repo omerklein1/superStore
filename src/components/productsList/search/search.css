@@ -1,12 +1,11 @@
 props {
-    color: #e83299;
+    color: #a80909;
     font-weight: bold
 }
 .search {
-    border-radius: 5px;
-    border-color: transparent;
+    border-color: #0000005e;
     margin-right: 50%;
     border-radius: 20px;
-    background-color: #b1d426;
-    color: white
+    background-color: #00000000;
+    color: #fff;    
 }

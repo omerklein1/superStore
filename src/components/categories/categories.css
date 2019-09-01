@@ -13,15 +13,20 @@
 .categories-list {
     padding: 0;
     margin: 10px;
+    width: 280px;
 }
 .categories-list li {
-    background-color: #a8d310;
-    border: 3px solid white;
+    background-color: #9e9e9e00;
     border-radius: 30px;
     margin: 5px;
     text-align: center;
-    color: white;
+    color: #fff;
     cursor: pointer;
+    width: 228ox;
+    font-size: 1.4em;
 }
 
-
+.categories-list li:hover {
+border: 1px solid black;
+transform: scale(1.1)
+}
