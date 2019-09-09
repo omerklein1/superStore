@@ -12,6 +12,7 @@ class Components extends Component {
     componentDidMount() {
         this.props.gatDataList()
     }
+    
     onTextChange = (text) => {
         this.setState({ text })
     }

@@ -15,24 +15,25 @@
 }
 
 .item:hover {
-border-color: black;
-transform: scale(1.1)
+  border-color: black;
+  transform: scale(1.05)
 }
 
 .edit {
   animation-delay: -.05s;
   animation-duration: .27s;
- }
+}
 
 
 .item-img {
   height: auto;
   width: 140px;
   border-top-right-radius: 10%;
-    border-top-left-radius: 10%;
-    margin: auto;
+  border-top-left-radius: 10%;
+  margin: auto;
 
 }
+
 .item-btn {
   width: 100%;
   background-color: #2e9fad00;
@@ -51,47 +52,51 @@ transform: scale(1.1)
   display: block;
   font-size: 1.5em;
 }
+
 .item h5 {
   font-weight: normal;
 }
+
 .item prop {
   font-size: x-small;
 }
 
-.item h5,.item p,.item button {
-    margin: 0;
-    text-overflow: ellipsis; 
-    overflow: hidden; 
-    white-space: nowrap;
-    direction: ltr;
-    }
-    
-  /* Tooltip text */
- .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-   
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    /* z-index: 1; */
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
+.item h5,
+.item p,
+.item button {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  direction: ltr;
+}
 
- 
+/* Tooltip text */
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  /* z-index: 1; */
+}
 
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 
-  /* .edit:nth-child(2n) {
+
+
+
+
+/* .edit:nth-child(2n) {
     animation-name: keyframes1;
     animation-iteration-count: infinite;
     transform-origin: 50% 10%;

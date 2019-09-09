@@ -6,7 +6,6 @@ import categories from './categories'
 import cart from './cart'
 import admin from './admin'
 import subCategories from './subCategories'
-// import btnStatus from './btnStatus'
 
 
 
@@ -16,7 +15,6 @@ const allReducers =combineReducers({
     categoryFilter,
     categories,
     cart,
-    // btnStatus,
     subCategories,
     admin
 })
