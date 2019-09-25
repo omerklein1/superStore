@@ -11,7 +11,8 @@ class Product extends Component {
         super()
         this.state = {
             cartButton: true,
-            updateMode: ''
+            updateMode: '',
+            descrip: ''
         }
     }
 
@@ -31,13 +32,17 @@ class Product extends Component {
         this.setState({ updateMode: product })
     }
 
+    openDescription = (product) => {
+        this.setState({ descrip: product })
+    }
     // info = () => {
     //     this.setState({ info: 'on' })
     // }
 
     render() {
-        const { name, image, price, admin, product /* description */ } = this.props;
-        let { cartButton, updateMode } = this.state,
+        const { name, image, price, admin, product } = this.props,
+            { id, description } = product;
+        let { cartButton, updateMode, descrip } = this.state,
             keys = Object.keys(product)
 
 
@@ -45,13 +50,19 @@ class Product extends Component {
             <Modal open={updateMode} title={`עריכת מוצר: ${name}`}>
                 <UpdatProduct product={product} />
             </Modal>
-            {/* <Modal open={updateMode} title={name}>
-                <ul>
-                    {keys.map(key=> <li>{`${key}: ${product.key}`}</li>)}
-                </ul>
-            </Modal> */}
-            <li id="item" className={admin ? 'item edit' : 'item'} >
+
+            <Modal open={descrip} title={name}>
                 <img className="item-img" src={image} alt="item pic" />
+                <ul className="descripList">
+                    <li><span>id:</span> {id}</li>
+                    <li><span>name:</span> {name}</li>
+                    <li><span>price:</span> {price}</li>
+                    <li><span>description:</span> {description}</li>
+                </ul>
+            </Modal>
+
+            <li id="item" className={admin ? 'item edit' : 'item'} >
+                <img className="item-img" src={image} alt="item pic" onClick={() => this.openDescription({ product })} />
                 <h5 className="tooltip">{name}</h5>
                 <p>₪{price}</p>
                 {/* <prop>{description}</prop> */}

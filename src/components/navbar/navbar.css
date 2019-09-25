@@ -1,17 +1,23 @@
-
 .navbar {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     direction: rtl;
     padding: 5px;
-    /* background-color: transparent; */
-    border-radius: 50px;
-    color: white;
+
+    background-color: #9C27B0;
+    /* border-radius: 50px; */
+    color: black;
     width: 100%;
     max-width: 1000px;
     margin-top: auto;
     /* position: fixed; */
+    box-shadow: -17px 4px 8px 10px rgba(0, 0, 0, .17);
+}
+
+h1 {
+    font-family: cursive;
+    letter-spacing: 8px;
 }
 
 /* html:not([data-scroll='0']) {
@@ -25,6 +31,7 @@
 .home-img {
     width: 100%;
 }
+
 .home-title {
     top: 323px;
     position: absolute;
@@ -36,10 +43,6 @@
 }
 
 #start {
-    height: 65px    ;
-        background-color: #000c;
+    height: 65px;
+    background-color: #000c;
 }
-
-
-
-

@@ -1,32 +1,32 @@
+form {
+   display: flex;
+   flex-direction: column;
+   /* text-align: start; */
+   margin-right: 15px;
+   color: black;
+   font-weight: bold;
+}
 
- form {
-    display: flex;
-    flex-direction: column;
-    /* text-align: start; */
-    margin-right: 15px;
-    color: #a80909;
-    font-weight: bold;
- }
-
- form input {
-   border-radius: 20px;
+form input {
    background-color: transparent;
    margin: 5px;
-   border: 1px solid black;
- }
- form input::after {
-     border-radius: 20px;
- }
+   border: none;
 
- .submit {
-    width: 75%;
-    color: #a80909;
-    cursor: pointer;
-    height: 27px;
-    margin: auto;
-    margin-bottom: 25px;
-    font-weight: bold;
-    font-size: inherit;
- }
+}
 
- 
+form input::after {
+   border-radius: 20px;
+}
+
+.submit {
+   width: 75%;
+   color: black;
+   cursor: pointer;
+   height: 30px;
+   margin: 25px auto 25px;
+   /* margin-bottom: 25px; */
+   font-weight: bold;
+   font-size: inherit;
+   background: #8BC34A;
+   border-radius: 20px;
+}

@@ -1,16 +1,27 @@
 .App {
   text-align: center;
   margin: auto;
-max-width: 1010px;
-    overflow: hidden;
-    direction: rtl;
-}
-body {
+  max-width: 1010px;
   overflow: hidden;
-  /* height: 110%; */
-  background-image: linear-gradient(to bottom right, #8c9ca4 , #ffba00c9);
+  direction: rtl;
 }
 
+body {
+  /* overflow: hidden; */
+  /* height: 110%; */
+  /* background-image: linear-gradient(to bottom right, #8c9ca4 , #ffba00c9); */
+  background: #f5f5f5;
+}
 
+body::-webkit-scrollbar {
+  /* width: 0px; */
+  background: transparent;
+}
 
+.zi1 {
+  z-index: 1;
+}
 
+.zi0 {
+  z-index: -1;
+}

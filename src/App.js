@@ -3,10 +3,11 @@ import Components from './components'
 import './App.css';
 
 function App() {
+
   return (
-    <div className="App">
-    <Components />
-  </div>
+    <div className="App" >
+      <Components />
+    </div>
   );
 }
 

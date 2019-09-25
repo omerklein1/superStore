@@ -1,11 +1,14 @@
 props {
-    color: #a80909;
-    font-weight: bold
+    color: black;
+    font-weight: bold;
+    text-shadow: -4px 3px 1px rgba(0, 0, 0, .17);
 }
+
 .search {
-    border-color: #0000005e;
     margin-right: 50%;
     border-radius: 20px;
-    background-color: #00000000;
-    color: #fff;    
+    border: none;
+    background: white;
+    padding: 5px;
+    box-shadow: 1px 1px 8px 1px #0000002b;
 }

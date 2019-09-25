@@ -4,14 +4,16 @@ select {
     background-color: transparent;
 }
 
-.img-user , p {
-display: inline;
+.img-user,
+p {
+    display: inline;
 }
 
-.user button, .btnPlus {
-    background-color: white;
+.user button,
+.btnPlus {
+    background-color: #8BC34A;
     border-radius: 15px;
-    color: #a80909;
+    color: black;
     border: none;
     font-weight: bold;
     margin: 2px;

@@ -12,18 +12,29 @@ class Components extends Component {
     componentDidMount() {
         this.props.gatDataList()
     }
-    
+
     onTextChange = (text) => {
         this.setState({ text })
     }
 
+    scrolling = () => {
+        let scroll = document.querySelector('body')
+        console.log(scroll.scrollTop)
+    }
+
     render() {
         const { products } = this.props
-        return products ? <main className='components'>
-            <Navbar />
-            <Categories />
-            <ProductsList className="countainer"/>
-        </main> : 'טוען'
+        return <>
+            <div onScroll={this.scrolling}>
+                <img className="homepage" src="img/homepage.jpg" alt="homepage" />
+            </div>
+            {products ? <main className='components' >
+                <Navbar />
+                <Categories />
+                <ProductsList className="countainer" />
+            </main>
+                : 'טוען'}
+        </>
     }
 }
 

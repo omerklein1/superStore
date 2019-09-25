@@ -12,11 +12,12 @@
   flex-direction: column;
   justify-content: space-between;
   border-top-left-radius: 10%;
+  box-shadow: 1px 1px 8px 1px #0000002b;
 }
 
 .item:hover {
-  border-color: black;
-  transform: scale(1.05)
+  /* border-color: black; */
+  transform: scale(1.05);
 }
 
 .edit {
@@ -31,23 +32,24 @@
   border-top-right-radius: 10%;
   border-top-left-radius: 10%;
   margin: auto;
-
+  cursor: pointer;
 }
 
 .item-btn {
   width: 100%;
-  background-color: #2e9fad00;
+  background-color: #8BC34A;
   color: #333;
   cursor: pointer;
   height: 27px;
   padding: 0;
   opacity: 1;
   font-weight: bold;
-  border: 2px solid #100f0f;
+  /* border: 2px solid #100f0f; */
+  border: none;
 }
 
 .item p {
-  color: #a80909;
+  color: black;
   font-weight: bold;
   display: block;
   font-size: 1.5em;
@@ -89,6 +91,17 @@
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.descripList span {
+  color: #000;
+  font-weight: 700;
+}
+
+.descripList {
+  text-align: end;
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 
