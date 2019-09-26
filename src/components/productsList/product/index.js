@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import Modal from '../../modal'
 import { addToCart } from '../../../actions';
 import ControlCart from './controlCart'
-import UpdatProduct from './updateProduct'
-import './product.css'
+import UpdatProduct from './updateProduct';
+import aos from 'aos'
+import './product.css';
 
 class Product extends Component {
     constructor() {
@@ -61,7 +62,7 @@ class Product extends Component {
                 </ul>
             </Modal>
 
-            <li id="item" className={admin ? 'item edit' : 'item'} >
+            <li id="item" className={admin ? 'item edit' : 'item'} data-aos="fade-up">
                 <img className="item-img" src={image} alt="item pic" onClick={() => this.openDescription({ product })} />
                 <h5 className="tooltip">{name}</h5>
                 <p>₪{price}</p>

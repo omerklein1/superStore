@@ -27,15 +27,15 @@
     const scrolling = () => {
       const body = document.querySelector('body')
       const main = document.querySelector('main')
-      const home = document.querySelector('.homepage')
+      const home = document.querySelector('#homepage')
       const navbar = document.querySelector('.navbar')
       counter += 1;
-      if (counter >= 15 && homepage === true) {
-        main.style.opacity = 1;
-        home.style.opacity = 0;
-        body.style.overflow = "hidden"
-        navbar.scrollIntoView()
+      if (counter >= 5 && homepage === true) {
+        body.style.position = "fixed"
         home.setAttribute('class', 'homepage zi0')
+        home.style.opacity = 0;
+        main.style.opacity = 1;
+        // body.scrollIntoView()
         homepage = false;
       }
 

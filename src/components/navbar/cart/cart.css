@@ -40,3 +40,21 @@
     cursor: pointer;
     margin: 8px;
 }
+
+.mobileCart-img {
+    width: 35px;
+    margin-right: 20px;
+}
+
+.mobileCart {
+    display: none;
+    position: fixed;
+    top: 45px;
+    right: -25px;
+    width: 60px;
+    height: 35px;
+    background: #8BC34A;
+    border-radius: 46%;
+    cursor: pointer;
+    border: 0.5px solid;
+}

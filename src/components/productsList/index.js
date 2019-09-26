@@ -11,30 +11,32 @@ class ProductsList extends Component {
     render() {
         let { products, id = '', text = '' } = this.props,
             filter
-        
-        
+
         if (text) {
             filter = products.filter(pro => pro.name.toLowerCase().startsWith(text))
             console.log(text, 'text')
-        } else if(id){
+        } else if (id) {
             filter = []
             filter = products.filter(pro => pro.categoryId === id)
             console.log(id, 'id')
-        } else{
+        } else {
             filter = products
         }
-        
 
-        return <div className="productsList"><Search lengthList={filter.length} />
-            <ul className="countainer" >
-                {filter.map(pro => <Product
-                    product={pro}
-                    {...pro}
-                />)
-                }
-                <li className="try"> - </li>
+
+        return <>
+            <Search lengthList={filter.length} />
+            <div className="productsList">
+                <ul className="countainer" >
+                    {filter.map(pro => <Product
+                        product={pro}
+                        {...pro}
+                    />)
+                    }
+                    <li className="try"> - </li>
                 </ul>
-                </div>
+            </div>
+        </>
     }
 }
 

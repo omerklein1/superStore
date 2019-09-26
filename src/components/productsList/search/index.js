@@ -9,13 +9,14 @@ class Search extends Component {
         const text = e.target.value
         this.props.change(text.toLowerCase())
     }
- 
+
     render() {
-        return <><h2>מוצרים</h2><props>({this.props.lengthList})</props>
-        <input className="search" onChange={this.changeText} type="search" placeholder="חפש"></input>
-    </>
+        return <div className="productsTitle">
+            <div><h2 className="titlep">מוצרים</h2><props>({this.props.lengthList})</props></div>
+            <input className="search" onChange={this.changeText} type="search" placeholder="חפש"></input>
+        </div>
     }
 }
 
 export default connect(state => ({
-}), {change})(Search);;
+}), { change })(Search);;

@@ -5,10 +5,22 @@ props {
 }
 
 .search {
-    margin-right: 50%;
     border-radius: 20px;
     border: none;
     background: white;
     padding: 5px;
     box-shadow: 1px 1px 8px 1px #0000002b;
+}
+
+.productsTitle {
+    max-width: 700px;
+    float: left;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.titlep {
+    display: inline;
 }

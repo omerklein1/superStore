@@ -7,6 +7,7 @@
     top: 0;
     transition: top 0.5s, opacity 0.5s;
     background-image: white;
+    left: 147px;
 }
 
 h3 {
@@ -15,13 +16,14 @@ h3 {
     padding: 5px;
     background-color: #9C27B0;
     color: black;
-    /* border-radius: 15px; */    text-align: center;
+    /* border-radius: 15px; */
+    text-align: center;
 }
 
 .cartWindow.cartOpen {
     opacity: 1;
     pointer-events: auto;
-    top: 90px
+    top: 90px;
 }
 
 .cartTitle {
