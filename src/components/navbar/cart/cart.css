@@ -32,7 +32,7 @@
 }
 
 .buy {
-    background-color: #8BC34A;
+    background-color: #607D8B;
     border-radius: 15px;
     color: black;
     border: none;
@@ -53,7 +53,7 @@
     right: -25px;
     width: 60px;
     height: 35px;
-    background: #8BC34A;
+    background: #607D8B;
     border-radius: 46%;
     cursor: pointer;
     border: 0.5px solid;

@@ -5,7 +5,7 @@
     direction: rtl;
     padding: 5px;
 
-    background-color: #9C27B0;
+    background-color: #795548;
     /* border-radius: 50px; */
     color: black;
     width: 100%;
@@ -18,6 +18,9 @@
 h1 {
     font-family: cursive;
     letter-spacing: 8px;
+    text-shadow: -4px 3px 1px rgba(0, 0, 0, .17);
+    animation: keyframes2 ease-out 1.5s infinite;
+    animation-direction: alternate;
 }
 
 /* html:not([data-scroll='0']) {

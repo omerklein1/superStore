@@ -11,7 +11,7 @@ p {
 
 .user button,
 .btnPlus {
-    background-color: #8BC34A;
+    background-color: #607D8B;
     border-radius: 15px;
     color: black;
     border: none;
@@ -22,6 +22,7 @@ p {
 
 .user {
     width: 35%;
-    text-align: start;
+    text-align: end;
     margin-right: 25px;
+    direction: ltr;
 }

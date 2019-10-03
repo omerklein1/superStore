@@ -37,7 +37,7 @@
 
 .item-btn {
   width: 100%;
-  background-color: #8BC34A;
+  background-color: #607D8B;
   color: #333;
   cursor: pointer;
   height: 27px;
@@ -122,25 +122,28 @@
     animation-direction: alternate;
     transform-origin: 30% 5%;
 }
- 
+ */
+
 @keyframes keyframes1 {
-    0% {
-        transform: rotate(-1deg);
-        animation-timing-function: ease-in;
-    }
-    50% {
-        transform: rotate(1.5deg);
-        animation-timing-function: ease-out;
-    }
+  0% {
+    transform: rotate(-1deg);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: rotate(1.5deg);
+    animation-timing-function: ease-out;
+  }
 }
- 
+
 @keyframes keyframes2 {
-    0% {
-        transform: rotate(1deg);
-        animation-timing-function: ease-in;
-    }
-    50% {
-        transform: rotate(-1.5deg);
-        animation-timing-function: ease-out;
-    }
-} */
+  0% {
+    transform: rotate(1deg);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: rotate(-1.5deg);
+    animation-timing-function: ease-out;
+  }
+}

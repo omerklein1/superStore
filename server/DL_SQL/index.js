@@ -1,3 +1,5 @@
+
+
 const mysql = require('mysql'),
     database = "LW2xRNJF3p",
     con = mysql.createConnection({
@@ -25,13 +27,13 @@ async function create(table, item) {
         values = '';
 
     for (let i = 0; i < keys.length; i++) {
-        if (i == keys.length - 1){values += `'${item[keys[i]]}'`}
-        else {values += `'${item[keys[i]]}', `}
+        if (i == keys.length - 1) { values += `'${item[keys[i]]}'` }
+        else { values += `'${item[keys[i]]}', ` }
     }
 
     console.log(`INSERT INTO ${table} (${keys.join(', ')})
     VALUES (${values})`)
-    
+
     const res = await query(`INSERT INTO ${table} (${keys.join(', ')})
     VALUES (${values})`)
     if (res.affectedRows == 1)
@@ -43,7 +45,7 @@ async function create(table, item) {
 
 async function read(table, id) {
     let q = `SELECT * FROM ${table} `
-    
+
     if (id) q += `WHERE id='${id}'`
 
     const res = await query(q)

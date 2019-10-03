@@ -7,14 +7,14 @@
     top: 0;
     transition: top 0.5s, opacity 0.5s;
     background-image: white;
-    left: 147px;
+    left: 213px;
 }
 
 h3 {
     margin: 0;
     font-size: 25px;
     padding: 5px;
-    background-color: #9C27B0;
+    background-color: #795548;
     color: black;
     /* border-radius: 15px; */
     text-align: center;
@@ -27,7 +27,7 @@ h3 {
 }
 
 .cartTitle {
-    background-color: #9C27B0;
+    background-color: #795548;
     text-align: center;
     margin: 0;
 }

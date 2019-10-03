@@ -20,6 +20,7 @@ ul {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 
 main {
@@ -44,6 +45,7 @@ main {
   transform: scale3d(.5, .5, .5);
   -webkit-animation: move 3s ease-out infinite;
   animation: move 3s ease-out infinite;
+  z-index: 2;
 }
 
 .chevron:first-child {
@@ -109,6 +111,7 @@ main {
   opacity: .25;
   -webkit-animation: pulse 2s linear infinite alternate;
   animation: pulse 2s linear infinite alternate;
+  z-index: 2;
 }
 
 @keyframes pulse {
@@ -181,11 +184,11 @@ main {
 
   .chevron:before,
   .chevron:after {
-    background: #9C27B0;
+    background: #795548;
   }
 
   .text {
-    color: #9C27B0;
+    color: #795548;
   }
 
 }
