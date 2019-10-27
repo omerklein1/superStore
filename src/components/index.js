@@ -3,6 +3,7 @@ import Navbar from "./navbar"
 // import Login from './login'
 import Categories from './categories'
 import ProductsList from './productsList'
+import Loader from './loader'
 import { connect } from 'react-redux'
 import { gatDataList } from '../actions'
 import './components.css'
@@ -39,7 +40,7 @@ class Components extends Component {
                 <Categories />
                 <ProductsList className="countainer" />
             </main>
-                : 'טוען'}
+                : <Loader />}
         </>
     }
 }

@@ -31,12 +31,12 @@ class User extends Component {
             <button onClick={() => this.setState(user ? { user: '' } : { openLogin: !openLogin })}>{user ? 'התנתק' : 'התחבר'}</button>
             {user ? <button onClick={() => adminState(admin)}>{admin ? 'מצב מנהל' : 'עבור למצב מנהל'}</button> : null}
             <img className="img-user" src={user ? user.image : 'https://static.thenounproject.com/png/17241-200.png'} alt="user pic" />
-            {admin ? <><button onClick={() => this.setState({ addProduct: !addProduct })}> + הוסף מוצר חדש</button>
+            {user ? admin ? <><button onClick={() => this.setState({ addProduct: !addProduct })}> + הוסף מוצר חדש</button>
                 <Modal open={addProduct} title="הוסף מוצר חדש">
                     <AddNewProduct />
                 </Modal>
 
-            </> : null}
+            </> : null : null}
         </li>
             <Modal open={openLogin} title="התחבר לאתר">
                 <Login getUser={this.getUser} closeLogin={this.closeLogin} />

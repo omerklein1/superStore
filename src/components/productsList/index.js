@@ -13,7 +13,7 @@ class ProductsList extends Component {
             filter
 
         if (text) {
-            filter = products.filter(pro => pro.name.toLowerCase().startsWith(text))
+            filter = products.filter(pro => pro.name.toLowerCase().includes(text))
             console.log(text, 'text')
         } else if (id) {
             filter = []

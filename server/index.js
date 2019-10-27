@@ -3,7 +3,8 @@ const
    app = express(),
    bodyParser = require('body-parser'),
    router = require('./Router'),
-   cors = require('cors')
+   cors = require('cors'),
+   path = require('path')
 
 
 app.use(cors())

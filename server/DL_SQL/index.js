@@ -13,10 +13,8 @@ const mysql = require('mysql'),
 function query(sqlString) {
     return new Promise((resolve, reject) => {
         con.query(sqlString, (err, result) => {
-
             if (err) reject(err.sqlMessage || err)
             resolve(result)
-
         })
     })
 }
