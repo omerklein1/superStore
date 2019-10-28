@@ -39,20 +39,20 @@
 .item-btn {
   width: 50%;
   background-color: #607d8b;
-  color: #333;
+  color: white;
   cursor: pointer;
   height: 27px;
   padding: 0;
   opacity: 1;
   font-weight: 700;
   border: none;
-  margin-right: 43px !important;
+  margin-right: 42px !important;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
 
 .item p {
-  color: black;
+  color: #16507e;
   font-weight: bold;
   display: block;
   font-size: 1.5em;
