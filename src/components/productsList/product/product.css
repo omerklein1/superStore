@@ -13,6 +13,7 @@
   justify-content: space-between;
   border-top-left-radius: 10%;
   box-shadow: 1px 1px 8px 1px #0000002b;
+  border-radius: 50%;
 }
 
 .item:hover {
@@ -36,16 +37,18 @@
 }
 
 .item-btn {
-  width: 100%;
-  background-color: #607D8B;
+  width: 50%;
+  background-color: #607d8b;
   color: #333;
   cursor: pointer;
   height: 27px;
   padding: 0;
   opacity: 1;
-  font-weight: bold;
-  /* border: 2px solid #100f0f; */
+  font-weight: 700;
   border: none;
+  margin-right: 43px !important;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 .item p {
