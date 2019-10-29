@@ -16,13 +16,19 @@ p {
     color: white;
     border: none;
     font-weight: bold;
-    margin: 2px;
+    margin: 1px;
     cursor: pointer;
 }
 
 .user {
-    width: 35%;
-    text-align: end;
-    margin-right: 25px;
-    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid;
+    margin-left: 8px;
+}
+
+.user p {
+    margin: 3px 0 0 0px;
+    font-size: small;
+    font-weight: bold;
 }

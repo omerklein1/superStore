@@ -26,6 +26,7 @@ class Components extends Component {
     render() {
         const { products } = this.props
         return <>
+            <header><Navbar /></header>
             <div onScroll={this.scrolling} id="homepage">
                 <img className="homepage" src="img/homepage.jpg" alt="homepage" />
                 <div class="homepage-container">
@@ -35,11 +36,11 @@ class Components extends Component {
                     <span class="text">Scroll down</span>
                 </div>
             </div>
-            {products ? <main className='components' >
-                <Navbar />
-                <Categories />
-                <ProductsList className="countainer" />
-            </main>
+            {products ?
+                <main>
+                    <Categories />
+                    <ProductsList className="countainer" />
+                </main>
                 : <Loader />}
         </>
     }

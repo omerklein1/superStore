@@ -26,6 +26,8 @@ ul {
 main {
   opacity: 0;
   transition: opacity 1.5s;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .homepage-container {
@@ -147,7 +149,6 @@ main {
   .user {
     margin: 0 !important;
     text-align: center !important;
-    width: 100% !important;
   }
 
   .cart {
@@ -158,10 +159,6 @@ main {
     left: 0 !important;
     right: 0 !important;
     width: 100%;
-  }
-
-  .navbar {
-    display: block !important;
   }
 
   .categories-list {
@@ -184,11 +181,15 @@ main {
 
   .chevron:before,
   .chevron:after {
-    background: #795548;
+    background: #607d8b;
   }
 
   .text {
-    color: #795548;
+    color: #607d8b;
+  }
+
+  h1 {
+    margin: auto;
   }
 
 }

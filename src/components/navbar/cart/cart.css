@@ -3,42 +3,37 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    margin: 0 28px;
 }
 
-.cart-img {
-    margin-right: 25px;
-}
-
-.cart-p1 {
-    bottom: 25px;
-    right: 50px;
-}
-
-.cart-p2 {
-    left: 12px;
-}
 
 .cart-p1,
 .cart-p2 {
     font-weight: bold;
-    position: relative;
+    margin: auto;
+}
+
+.cart-data {
+    font-size: small;
 }
 
 .cart {
-    width: 26%;
-    height: 86px;
-    margin-left: 25px;
-    text-align: end;
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid;
+    margin-left: 8px;
 }
 
 .buy {
     background-color: #607D8B;
     border-radius: 15px;
-    color: black;
+    color: white;
     border: none;
     font-weight: bold;
     cursor: pointer;
-    margin: 8px;
+    margin: 1px;
+    display: block;
+    width: -webkit-fill-available;
 }
 
 .mobileCart-img {

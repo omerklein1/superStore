@@ -32,9 +32,12 @@ class Cart extends Component {
             <CartWindow cartOn={cartOn} />
 
             <li className="cart" ><div >
-                <p className="cart-p1">{numOfProInCart} מוצרים</p>
-                <p className="cart-p2">{cost} ₪</p>
                 <img className="cart-img" src="img/cart.png" alt="cart" />
+                <div className="cart-data">
+                    <p className="cart-p1">{numOfProInCart} מוצרים | </p>
+                    <p className="cart-p2">{cost} ₪</p>
+                </div>
+
                 <>{numOfProInCart > 0 ? <><button className="buy" onClick={() => this.setState({ cartOn: !cartOn })}>{cartOn ? 'הסתר עגלה =>' : 'הצג עגלה =>'}</button><button className="buy" onClick={() => emptyCart()}>רוקן עגלה</button></> : null}</>
             </div></li>
         </>

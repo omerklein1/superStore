@@ -4,15 +4,19 @@
     justify-content: space-between;
     direction: rtl;
     padding: 5px;
-
-    background-color: #795548;
+    height: 85px;
+    /* background-color: #607d8b; */
     /* border-radius: 50px; */
     color: black;
     width: 100%;
-    max-width: 1000px;
     margin-top: auto;
     /* position: fixed; */
     box-shadow: -17px 4px 8px 10px rgba(0, 0, 0, .17);
+}
+
+.icons {
+    display: flex;
+    width: auto;
 }
 
 h1 {
@@ -21,6 +25,7 @@ h1 {
     text-shadow: -4px 3px 1px rgba(0, 0, 0, .17);
     animation: keyframes2 ease-out 1.5s infinite;
     animation-direction: alternate;
+    margin-left: 10px;
 }
 
 /* html:not([data-scroll='0']) {
