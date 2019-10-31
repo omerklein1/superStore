@@ -3,99 +3,124 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Test</title>
     <style>
-        div {
-            width: 100px;
-            height: 100px;
-            background-color: red;
+        .home1 {
+            width: 100%;
+        }
+
+        .img1 {
+            float: right;
+            min-width: 50%;
+        }
+
+        .text1 {
+            float: left;
+            margin-left: 8%;
+        }
+
+        .text1 h2 {
+            font-size: 5em;
+            text-align: center;
+        }
+
+        .text1 button {
+            cursor: pointer;
+            display: inline-block;
+            min-width: 170px;
+            height: 50px;
+            color: #ffffff;
+            border: none;
+            border-radius: 0;
+            padding: 0 40px;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 50px;
+            background-color: #0315ff;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .text1 button:hover {
+            background-color: #E91E63;
+            transition: background-color 0.5s ease-out;
+        }
+
+        .home2 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .home2 li {
+            width: 350px;
+            height: 240px;
+            list-style: none;
+            background-size: contain;
+            background-repeat: no-repeat;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .home2 li a {
             position: relative;
-            -webkit-animation-name: example;
-            /* Safari 4.0 - 8.0 */
-            -webkit-animation-duration: 4s;
-            /* Safari 4.0 - 8.0 */
-            animation-name: example;
-            animation-duration: 4s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
+            top: 37%;
+            font-size: xx-large;
+            color: lightyellow;
+            background-color: #2196f361;
         }
 
-        /* Safari 4.0 - 8.0 */
-        @-webkit-keyframes example {
-            0% {
-                background-color: red;
-                left: 0px;
-                top: 0px;
-            }
-
-            25% {
-                background-color: yellow;
-                right: 0px;
-                top: 0px;
-            }
-
-            50% {
-                background-color: blue;
-                right: 0px;
-                bottom: 0px;
-            }
-
-            75% {
-                background-color: green;
-                left: 0px;
-                bottom: 0px;
-            }
-
-            100% {
-                background-color: red;
-                left: 0px;
-                top: 0px;
-            }
+        .home2 li:hover a {
+            background-color: #E91E63;
+            transition: background-color 0.5s ease-out;
         }
 
-        /* Standard syntax */
-        @keyframes example {
-            0% {
-                background-color: red;
-                left: 0px;
-                top: 0px;
-            }
 
-            25% {
-                background-color: yellow;
-                left: 100%;
-                top: 0px;
-                transform: rotate(360deg);
-            }
 
-            50% {
-                background-color: blue;
-                left: 100%;
-                top: 500px;
-                transform: rotate(0deg);
-            }
+        .img3 {
+            float: left;
+        }
 
-            75% {
-                background-color: green;
-                left: 0px;
-                top: 500px;
-                transform: rotate(360deg);
-            }
-
-            100% {
-                background-color: red;
-                left: 0px;
-                top: 0px;
-            }
+        .text3 {
+            float: right;
+            margin-right: 8%;
+            margin-left: 0;
         }
     </style>
 </head>
 
 <body>
 
-    <div></div>
+    <section class="home1">
+        <img class="img1"
+            src="https://cdn.guidingtech.com/media/assets/WordPress-Import/2015/04/shutterstock_148831151-e1429555051846.jpg"
+            alt="">
+        <div class="text1">
+            <h2>new collection</h2>
+            <button>start shopping</button>
+        </div>
+    </section>
+
+    <section class="home2">
+        <li
+            style="background-image: url(https://static01.nyt.com/images/2016/01/07/technology/personaltech/07techfix-samsungsub/07techfix-samsungsub-articleLarge.jpg?quality=90&auto=webp);">
+            <a>TV</a></li>
+        <li style="background-image: url(https://gwebtechworld.com/wp-content/uploads/2019/06/Galaxy-A10-A30-A50.jpg);">
+            <a>Smartphones</a></li>
+        <li style="background-image: url(https://simplyfixit.co.uk/wp-content/uploads/2012/10/chillblastsystem1.jpg);">
+            <a>Computers</a></li>
+    </section>
+
+    <section class="home1 ">
+        <img class=" img1 img3" src="http://www.geek.com/wp-content/uploads/2010/09/hp_estation_tablet.png" alt="">
+        <div class="text1 text3">
+            <h2>Global Sale</h2>
+            <button>buy now</button>
+        </div>
+    </section>
 
 </body>
 

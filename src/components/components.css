@@ -24,9 +24,9 @@ ul {
 }
 
 main {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1.5s;
-  max-width: 1000px;
+  max-width: 1010px;
   margin: auto;
 }
 

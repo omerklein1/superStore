@@ -20,13 +20,13 @@
 .cart {
     display: flex;
     flex-direction: column;
-    border-left: 3px solid;
+    border-left: 3px solid #ebebeb;
     margin-left: 8px;
 }
 
 .buy {
     background-color: #607D8B;
-    border-radius: 15px;
+    border-radius: 5px;
     color: white;
     border: none;
     font-weight: bold;

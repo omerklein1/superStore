@@ -21,31 +21,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>Elecro-klein</title>
-
-
-  <script>
-    let counter = 0;
-    let homepage = true;
-    const scrolling = () => {
-      const body = document.querySelector('body')
-      const main = document.querySelector('main')
-      const home = document.querySelector('#homepage')
-      const navbar = document.querySelector('.navbar')
-      counter += 1;
-      if (counter >= 5 && homepage === true) {
-        body.style.position = "fixed"
-        home.setAttribute('class', 'homepage zi0')
-        home.style.opacity = 0;
-        main.style.opacity = 1;
-        // body.scrollIntoView()
-        homepage = false;
-      }
-
-    }
-  </script>
 </head>
 
-<body onscroll="scrolling()">
+<body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <!--

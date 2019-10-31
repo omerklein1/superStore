@@ -30,23 +30,24 @@
 .item-img {
   height: auto;
   width: 140px;
-  border-top-right-radius: 10%;
-  border-top-left-radius: 10%;
+  border-top-right-radius: 32%;
+  border-top-left-radius: 32%;
   margin: auto;
   cursor: pointer;
+  max-height: 140px;
 }
 
 .item-btn {
-  width: 50%;
+  width: 62%;
   background-color: #607d8b;
-  color: white;
+  color: #fff;
   cursor: pointer;
   height: 27px;
   padding: 0;
   opacity: 1;
   font-weight: 700;
   border: none;
-  margin-right: 42px !important;
+  margin-right: 32px !important;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }

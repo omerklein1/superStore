@@ -16,12 +16,17 @@ class Navbar extends Component {
 
 
     render() {
+        const { home, goShooping } = this.props
         return <ul className='navbar'>
             <div className="icons">
                 <User />
                 <Cart />
             </div>
-            <Title />
+            <li className="title">
+                <h1>Electro-Klein</h1>
+                <button className={home ? 'push' : null} onClick={home ? null : () => goShooping()}  >Home</button>
+                <button className={home ? null : 'push'} onClick={home ? () => goShooping() : null}>Shop</button>
+            </li>
         </ul>
 
     }
