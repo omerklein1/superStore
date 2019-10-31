@@ -18,11 +18,16 @@ class Home extends Component {
 
             <section className="home2">
                 <li
+                    onClick={() => this.props.goShooping()}
                     style={{ backgroundImage: 'url(https://static01.nyt.com/images/2016/01/07/technology/personaltech/07techfix-samsungsub/07techfix-samsungsub-articleLarge.jpg?quality=90&auto=webp)' }}>
                     <a>TV</a></li>
-                <li style={{ backgroundImage: 'url(https://gwebtechworld.com/wp-content/uploads/2019/06/Galaxy-A10-A30-A50.jpg)' }}>
+                <li
+                    onClick={() => this.props.goShooping()}
+                    style={{ backgroundImage: 'url(https://gwebtechworld.com/wp-content/uploads/2019/06/Galaxy-A10-A30-A50.jpg)' }}>
                     <a>Smartphones</a></li>
-                <li style={{ backgroundImage: 'url(https://simplyfixit.co.uk/wp-content/uploads/2012/10/chillblastsystem1.jpg)' }}>
+                <li
+                    onClick={() => this.props.goShooping()}
+                    style={{ backgroundImage: 'url(https://simplyfixit.co.uk/wp-content/uploads/2012/10/chillblastsystem1.jpg)' }}>
                     <a>Computers</a></li>
             </section>
 
