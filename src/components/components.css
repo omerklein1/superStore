@@ -200,6 +200,9 @@ main {
 
   .home2 {
     flex-direction: column-reverse;
+  }
 
+  .home1 {
+    flex-direction: column;
   }
 }

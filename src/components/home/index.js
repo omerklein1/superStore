@@ -31,7 +31,7 @@ class Home extends Component {
                     <a>Computers</a></li>
             </section>
 
-            <section className="home1 ">
+            <section className="home1 revers">
                 <img className=" img1 img3"
                     src="http://www.geek.com/wp-content/uploads/2010/09/hp_estation_tablet.png" alt="" />
                 <div className="text1 text3">

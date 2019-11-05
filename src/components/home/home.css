@@ -3,11 +3,14 @@
     display: flex;
 }
 
+.revers {
+    flex-direction: row-reverse;
+}
+
 .img1 {
     min-width: 50%;
 }
 
-.text1 {}
 
 .text1 h2 {
     font-size: 5em;
