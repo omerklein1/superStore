@@ -1,3 +1,20 @@
+In this project, I created an electronics store. The store includes:
+
+## Product Display 
+- Product List, Filter by Category, Search by Name.
+
+## Shopping Cart
+- Add and remove products from the cart, View Shopping Cart.
+
+## User Management Interface
+- Login and Registration.
+
+## Website Management Interface
+- A manager user who can edit products and add new products.
+
+### *** For the reason I wanted everyone to be impressed with the functionality of the site - currently every registered user is an admin user.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
