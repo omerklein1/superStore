@@ -188,8 +188,18 @@ main {
     color: #607d8b;
   }
 
-  h1 {
+  h1,
+  .text1 {
     margin: auto;
   }
 
+  .img1,
+  .home2 li {
+    width: 100%;
+  }
+
+  .home2 {
+    flex-direction: column-reverse;
+
+  }
 }

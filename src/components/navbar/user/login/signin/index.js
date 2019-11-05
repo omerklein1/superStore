@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import nodemailer from 'nodemailer'
 import './signin.css'
 
 class Signin extends Component {
-    
+
     submit = (e) => {
         e.preventDefault()
 
         const { userName, password, conPassword, firstName, lastName, email, image } = this.refs
 
         // console.log('pass:', password , 'con:' , conPassword)
-        if(password.value !== conPassword.value) return alert('אימות סיסמא נכשל! אנא הזן את אותה הסיסמא ב2 השדות') 
+        if (password.value !== conPassword.value) return alert('אימות סיסמא נכשל! אנא הזן את אותה הסיסמא ב2 השדות')
 
         const newUser = {
             userName: userName.value,
@@ -19,33 +20,34 @@ class Signin extends Component {
             lastName: lastName.value,
             email: email.value,
             image: image.value
-         }
-    axios.put('https://omerstore.herokuapp.com/signin', newUser).then(res => {
-        console.log('submit', res.data)
-        alert('הרישום בוצע בהצלחה! , ניתן להתחבר על-ידי הזנת שם משתמש וסיסמא. בהצלחה!')
-window.location.reload()
-        })
-            .catch (err => {
-                alert('הרישום נכשל - אנא נסה שנית.')
-    console.log(err)
+        }
+        axios.put('https://omerstore.herokuapp.com/signin', newUser).then(res => {
+            console.log('submit', res.data)
+            alert('הרישום בוצע בהצלחה! , ניתן להתחבר על-ידי הזנת שם משתמש וסיסמא. בהצלחה!')
 
-})
+            window.location.reload()
+        })
+            .catch(err => {
+                alert('הרישום נכשל - אנא נסה שנית.')
+                console.log(err)
+
+            })
     }
 
-render() {
-    return <form className='login' onSubmit={this.submit}>
-        <label>
-            <span>שם משתמש:</span>
-            <input ref='userName' type='text' placeholder='שם משתמש' required />
-        </label>
-        <label>
-            <span>סיסמא:</span>
-            <input ref='password' type='password' placeholder='סיסמא' required />
-        </label>
-        <label>
-            <span>אימות סיסמא:</span>
-            <input ref='conPassword' type='password' placeholder='הקש שנית את הסיסמא' required />
-        </label>
+    render() {
+        return <form className='login' onSubmit={this.submit}>
+            <label>
+                <span>שם משתמש:</span>
+                <input ref='userName' type='text' placeholder='שם משתמש' required />
+            </label>
+            <label>
+                <span>סיסמא:</span>
+                <input ref='password' type='password' placeholder='סיסמא' required />
+            </label>
+            <label>
+                <span>אימות סיסמא:</span>
+                <input ref='conPassword' type='password' placeholder='הקש שנית את הסיסמא' required />
+            </label>
             <label>
                 <span>שם פרטי:</span>
                 <input ref='firstName' type='text' placeholder='שם פרטי' required />
@@ -62,10 +64,10 @@ render() {
                 <span>תמונה:</span>
                 <input ref='image' type='url' placeholder='הזן כתובת תמונה' />
             </label>
-        <input className="submit" type='submit' value='הרשם'/>
-    </form>
+            <input className="submit" type='submit' value='הרשם' />
+        </form>
 
-}
+    }
 }
 
 export default Signin

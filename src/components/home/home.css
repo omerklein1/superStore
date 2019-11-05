@@ -1,16 +1,13 @@
 .home1 {
     width: 100%;
+    display: flex;
 }
 
 .img1 {
-    float: right;
     min-width: 50%;
 }
 
-.text1 {
-    float: left;
-    margin-left: 8%;
-}
+.text1 {}
 
 .text1 h2 {
     font-size: 5em;

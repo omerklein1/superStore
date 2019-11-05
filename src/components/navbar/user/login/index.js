@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Singin from './signin'
+import sendEmail from '../../../../email'
 import './login.css'
 
 class Login extends Component {
@@ -34,6 +35,7 @@ class Login extends Component {
         else {
             alert(`ברוכים הבאים לאתר ${userName.value}`)
             closeLogin()
+            sendEmail()
             return getUser(users[index])
         }
     }

@@ -57,10 +57,17 @@ h1 {
     color: #607D8B;
     background-color: #fff;
     border: 1px solid #607D8B;
+    transition: background-color 0.5s ease-out;
 }
 
 .push {
     background-color: #16507e !important;
+    transform: scale(1.1);
+    cursor: auto !important;
+}
+
+.push:hover {
+    color: white !important;
     transform: scale(1.1);
 }
 

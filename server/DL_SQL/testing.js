@@ -1,19 +1,37 @@
+const mysql = require('mysql'),
+    database = "sdfsdvxcvdsrg",
+    con = mysql.createConnection({
+        host: 'gg',
+        user: 'gg',
+        password: 'gg',
+        database
+    })
 
-const obj = {
-    name: 'omer',
-    id: 14,
-    email: 'oklein01@gmail.com'
+function query(sqlString) {
+    return new Promise((resolve, reject) => {
+        con.query(sqlString, (err, result) => {
+            if (err) reject(err.sqlMessage || err)
+            resolve(result)
+        })
+    })
 }
 
-let keys = Object.keys(obj),
-values = ''
+async function create(table, item) {
+    let keys = Object.keys(item),
+        valuse = ''
 
-for (let i = 0; i < keys.length; i++) {
-if(i == keys.length -1){
-    values += `'${obj[keys[i]]}'`
-}    else {
-    values += `'${obj[keys[i]]}', `
-}
+    for (let i = 0; i < keys.length; i++) {
+        if (i == keys.length - 1) { valuse += `'${item[keys[i]]}'` }
+        else { valuse += `'${item[keys[i]]}', ` }
+    }
+
+    console.log(`INSERT INTO ${table} (${keys.join(', ')})
+    VALUES (${valuse})`)
+
+    const res = await query(`INSERT INTO ${table} (${keys.join(', ')})
+    VALUES (${valuse})`)
+    if (res.affectedRows == 1)
+        return read(table, product.id)
+    throw 'create failed'
 }
 
-console.log(values)

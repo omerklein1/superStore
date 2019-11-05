@@ -62,21 +62,7 @@ const Router = app => {
             const { body } = req,
                 result = await BL.users.create(body)
             console.log('result', result)
-            const mailOptions = {
-                from: myEmail,
-                to: body.email || myEmail,
-                subject: 'אישור רישום לאתר Electro-klein',
-                html: `<h1> ${body.userName || ""} ברוכים הבאים </h1><p>הרישום בוצע בהצלחה! ,${body.userName || ''}</p><p>קניה מהנה</p>`
-                // text: 'תודה על רכישתך באתר בעלות  57,765ש"ח'
-            };
 
-            mail.sendMail(mailOptions, function (error, info) {
-                if (error) {
-                    console.log(error);
-                } else {
-                    console.log('Email sent: ' + info.response);
-                }
-            });
             res.send(result)
         }
         catch (err) {
